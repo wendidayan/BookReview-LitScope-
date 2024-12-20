@@ -118,7 +118,7 @@
                             ><a
                                 class="btn btn-outline-primary btn-lg"
                                 role="button"
-                                href="#"
+                                href="{{ route('login') }}"
                                 style="border-radius: 10px"
                                 >Explore Reviews</a
                             >
@@ -169,7 +169,7 @@
                             </svg>
                         </div>
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">6</h2>
+                            <h2 class="fw-bold mb-0"> {{ $totalBooks }}</h2>
                             <p class="mb-0">Books</p>
                         </div>
                     </div>
@@ -210,7 +210,7 @@
                             </svg>
                         </div>
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">1</h2>
+                            <h2 class="fw-bold mb-0"> {{ $totalComments }}</h2>
                             <p class="mb-0">Reviews</p>
                         </div>
                     </div>
@@ -250,7 +250,7 @@
                             </svg>
                         </div>
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">2</h2>
+                            <h2 class="fw-bold mb-0"> {{ $userCount }} </h2>
                             <p class="mb-0">Users</p>
                         </div>
                     </div>
@@ -286,7 +286,8 @@
                             </svg>
                         </div>
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">4</h2>
+                            <h2 class="fw-bold mb-0"> {{ $totalAuthors }}
+                            </h2>
                             <p class="mb-0">Authors</p>
                         </div>
                     </div>

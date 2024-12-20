@@ -221,4 +221,27 @@ class UserController extends Controller
     }
 
 
+    public function showWelcomePage()
+    {
+
+        $currentUser = auth()->user();
+
+        // Count the total number of users
+        $userCount = UserLogin::count();
+
+        // Count the number of comments that are not replies (parent_id is null)
+        $totalComments = Comment::whereNull('parent_id')->count();
+
+        // Count the number of books
+        $totalBooks = LandingView::count();
+
+        $totalAuthors = LandingView::distinct('author')->count('author');
+
+       
+
+    // Pass data to the AdminDashboard view
+        return view('WelcomePage', compact('userCount', 'totalComments',  'totalBooks', 'totalAuthors'));
+    }
+
+
 }

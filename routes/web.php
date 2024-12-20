@@ -19,7 +19,7 @@ use App\Models\UserLogin;
 
 
 // Display the login form (GET request)
-Route::get('/', [UserController::class, 'showLoginForm'])->name('login');
+Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
 
 // Handle the login form submission (POST request)
 Route::post('/login-page', [UserController::class, 'logrequest'])->name('login.submit'); 
@@ -28,7 +28,13 @@ Route::post('/login-page', [UserController::class, 'logrequest'])->name('login.s
 Route::post('/signup', [UserController::class, 'register'])->name('signup.submit');
 
 
+// Display the WelcomePage (GET request)
+//Route::get('/', function () {
+   // return view('WelcomePage');
+//})->name('welcome');
 
+
+Route::get('/', [UserController::class, 'showWelcomePage'])->name('welcome');
 
 
 // Landing page (after successful login)
@@ -73,7 +79,7 @@ Route::get('/access-denied', function () {
 
 //Route::resource('landings', LandingPageController::class);
 
-Route::get('/homepage', [LandingViewController::class, 'index'])->name('landingView.index');
+Route::get('/LandingPage', [LandingViewController::class, 'index'])->name('landingView.index');
 // Route to show details of a specific book by ID
 
 // Define the routes here

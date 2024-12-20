@@ -703,11 +703,7 @@
                                     <hr
                                 @endforeach
             
-                                    style="
-                                        width: inherit;
-                                        margin-top: 28px;
-                                        margin-bottom: 28px;
-                                    "
+                                  
                              </div>
                         </div>
                     </div>
