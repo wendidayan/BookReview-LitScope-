@@ -452,7 +452,7 @@
                                                 color: rgba(0, 0, 0, 0.65);
                                                 margin-left: 24px;
                                             "
-                                            >Account<svg
+                                            >{{ $currentUser->username }}<svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="1em"
                                                 height="1em"
@@ -817,6 +817,7 @@
                     if (response.success) {
                         alert(response.message);
                         $('#book-' + bookId).fadeOut(); // Optionally remove the row
+                        location.reload();
                     }
                 },
                 error: function(xhr) {
@@ -837,6 +838,7 @@
                     if (response.success) {
                         alert(response.message);
                         $('#book-' + bookId).fadeOut(); // Optionally remove the row
+                        location.reload();
                     }
                 },
                 error: function(xhr) {

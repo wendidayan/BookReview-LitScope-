@@ -453,7 +453,7 @@
                                                 color: rgba(0, 0, 0, 0.65);
                                                 margin-left: 24px;
                                             "
-                                            >Account<svg
+                                            > {{ $currentUser->username }}   <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="1em"
                                                 height="1em"
@@ -598,6 +598,10 @@
                                                                     <input class="form-check-input" type="checkbox" id="genre-anthologies" name="genres[]" value="Anthologies" />
                                                                     <label class="form-check-label" for="genre-anthologies">Anthologies</label>
                                                                 </div>
+                                                                <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                                    <input class="form-check-input" type="checkbox" id="genre-contemporary" name="genres[]" value="Contemporary" />
+                                                                    <label class="form-check-label" for="genre-contemporary">Romance</label>
+                                                                </div>
                                                             </div>
                                                             <div class="col">
                                                                 <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
@@ -620,6 +624,10 @@
                                                                     <input class="form-check-input" type="checkbox" id="genre-classics" name="genres[]" value="Classics" />
                                                                     <label class="form-check-label" for="genre-classics">Classics</label>
                                                                 </div>
+                                                                <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                                    <input class="form-check-input" type="checkbox" id="genre-contemporary" name="genres[]" value="Contemporary" />
+                                                                    <label class="form-check-label" for="genre-contemporary">Horror</label>
+                                                                </div>
                                                             </div>
                                                             <div class="col">
                                                                 <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
@@ -641,6 +649,10 @@
                                                                 <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
                                                                     <input class="form-check-input" type="checkbox" id="genre-contemporary" name="genres[]" value="Contemporary" />
                                                                     <label class="form-check-label" for="genre-contemporary">Contemporary</label>
+                                                                </div>
+                                                                <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                                    <input class="form-check-input" type="checkbox" id="genre-contemporary" name="genres[]" value="Contemporary" />
+                                                                    <label class="form-check-label" for="genre-contemporary">Comedy</label>
                                                                 </div>
                                                             </div>
                                                         </div>

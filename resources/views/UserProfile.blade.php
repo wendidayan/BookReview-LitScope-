@@ -13,10 +13,6 @@
         />
         <link
             rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
-        />
-        <link
-            rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
         />
         <link
@@ -25,64 +21,43 @@
         />
         <link
             rel="stylesheet"
-            href="/assets/css/styles.min.css?h=706920df8c03d9ab9283f7bdc38454e1"
+            href="/assets/css/styles.min.css?h=bea5dbea5cedb506a9a7889d33700a3f"
         />
     </head>
     <body>
         <!-- Start: Navbar With Button -->
         <nav
-            class="navbar navbar-expand-md bg-body d-none d-md-inline d-lg-inline d-xl-inline d-xxl-inline py-3"
+            class="navbar navbar-expand-md bg-body d-none d-md-inline d-lg-inline d-xl-inline d-xxl-inline py-3 my-0"
         >
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#"
-                    ><span>LITSCOPE</span></a
+                <button
+                    data-bs-toggle="collapse"
+                    class="navbar-toggler"
+                    data-bs-target="#navcol-2"
                 >
-                <div>
-                    <div
-                        class="dropdown d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center justify-content-xl-center align-items-xxl-center"
-                        style="
-                            width: 168.4375px;
-                            height: 45px;
-                            background: #334b35;
-                            border-radius: 102px;
-                            margin-left: 24px;
-                            margin-bottom: 0px;
-                            --bs-primary: rgb(51, 75, 53);
-                            --bs-primary-rgb: 51, 75, 53;
-                        "
-                    >
+                    <span class="visually-hidden">Toggle navigation</span
+                    ><span class="navbar-toggler-icon"></span>
+                </button>
+                <div><h4 class="pb-0 mb-0 me-4">LITSCOPE</h4></div>
+                <div
+                    class="d-xl-flex d-xxl-flex justify-content-xl-center align-items-xl-center justify-content-xxl-center align-items-xxl-center"
+                    style="
+                        background: #334b35;
+                        width: 445.7969px;
+                        height: 45px;
+                        max-width: 162px;
+                        border-radius: 22px;
+                    "
+                >
+                    <div class="dropdown">
                         <a
-                            class="d-xl-flex align-items-xl-center"
+                            class="dropdown-toggle text-decoration-none"
                             aria-expanded="false"
                             data-bs-toggle="dropdown"
                             href="#"
-                            style="
-                                color: rgb(255, 255, 255);
-                                text-decoration: none;
-                                font-size: 16px;
-                            "
-                            ><svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="1em"
-                                height="1em"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                style="margin-right: 6px"
-                            >
-                                <path
-                                    d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
-                                    fill="currentColor"
-                                ></path>
-                                <path
-                                    d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z"
-                                    fill="currentColor"
-                                ></path>
-                                <path
-                                    d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z"
-                                    fill="currentColor"
-                                ></path></svg
-                            >Categories</a
-                        >
+                            style="color: rgb(255, 255, 255)"
+                            >Dropdown
+                        </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#"
                                 ><svg
@@ -224,14 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <button
-                    data-bs-toggle="collapse"
-                    class="navbar-toggler"
-                    data-bs-target="#navcol-2"
-                >
-                    <span class="visually-hidden">Toggle navigation</span
-                    ><span class="navbar-toggler-icon"></span></button
-                ><input
+                <input
                     class="form-control-sm"
                     type="search"
                     style="
@@ -246,14 +214,49 @@
                         margin-left: 5px;
                         margin-right: 5px;
                     "
-                    placeholder="Search Books"
-                    name="SearchBooks"
+                    placeholder="Search"
+                    name="Search"
                 />
                 <div class="collapse navbar-collapse" id="navcol-2">
-                    <ul class="navbar-nav me-auto"></ul>
                     <a
-                        class="d-md-flex d-lg-flex d-xxl-flex justify-content-md-center justify-content-lg-center align-items-xxl-center"
-                        href="{{ route('myprofile') }}"
+                        class="d-md-flex d-lg-flex d-xxl-flex justify-content-md-center justify-content-lg-center align-items-xxl-center ms-3"
+                        href="#"
+                        style="
+                            text-decoration: none;
+                            border-style: none;
+                            border-color: rgba(0, 0, 0, 0.65);
+                            color: rgba(0, 0, 0, 0.65);
+                            margin-left: 24px;
+                            width: 154.4062px;
+                        "
+                        data-bs-target="#modal-1"
+                        data-bs-toggle="modal"
+                        >Log out<svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icon-tabler-logout"
+                            style="margin-left: 9px; font-size: 29px"
+                        >
+                            <path
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                            ></path>
+                            <path
+                                d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
+                            ></path>
+                            <path d="M9 12h12l-3 -3"></path>
+                            <path d="M18 15l3 -3"></path></svg></a
+                    ><!-- Start: accountBtn --><a
+                        class="d-md-flex d-lg-flex d-xxl-flex justify-content-md-center justify-content-lg-center align-items-xxl-center ms-3"
+                        href="#account"
                         style="
                             text-decoration: none;
                             border-style: none;
@@ -261,19 +264,29 @@
                             color: rgba(0, 0, 0, 0.65);
                             margin-left: 24px;
                         "
-                        >{{ $currentUser->username }}  <svg
+                        >{{ $currentUser->username }}<svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="1em"
                             height="1em"
-                            fill="currentColor"
-                            viewBox="0 0 16 16"
-                            class="bi bi-person"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icon-tabler-user"
                             style="margin-left: 9px; font-size: 29px"
                         >
                             <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
-                            ></path></svg
-                    ></a>
+                                stroke="none"
+                                d="M0 0h24v24H0z"
+                                fill="none"
+                            ></path>
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                            <path
+                                d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
+                            ></path></svg></a
+                    ><!-- End: accountBtn -->
                 </div>
             </div>
         </nav>
@@ -312,10 +325,10 @@
                 />
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown show">
                             <a
                                 class="dropdown-toggle nav-link"
-                                aria-expanded="false"
+                                aria-expanded="true"
                                 data-bs-toggle="dropdown"
                                 href="#"
                                 style="
@@ -325,7 +338,10 @@
                                 "
                                 >Categories</a
                             >
-                            <div class="dropdown-menu">
+                            <div
+                                class="dropdown-menu show"
+                                data-bs-popper="none"
+                            >
                                 <a class="dropdown-item" href="#"
                                     ><svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -483,8 +499,8 @@
                                 <!--<a class="dropdown-item" href="#"
                                     >Second Item</a
                                 ><a class="dropdown-item" href="#"
-                                    >Third Item</a
-                                >-->
+                                    >Third Item=</a
+                                >-->               
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -501,7 +517,7 @@
                                 >Pages</a
                             >
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('books.showAll') }}">List of Books</a >
+                                <a class="dropdown-item" href="{{ route('books.showAll') }}">Library</a >
                                 <!--<a class="dropdown-item" href="#"
                                     >Second Item</a
                                 ><a class="dropdown-item" href="#"
@@ -518,12 +534,12 @@
                         >
                             <a
                                 class="nav-link"
-                                href="{{ route('myprofile') }}"
+                                href="#"
                                 style="
                                     border-top-style: solid;
                                     border-top-color: rgba(179, 179, 179, 0.65);
                                 "
-                                >Account</a
+                                >{{ $currentUser->username }}</a
                             >
                         </li>
                     </ul>
@@ -566,11 +582,11 @@
                                 >Vendor</a
                             >
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('landingView.index') }}">Homepage</a>
+                                <a class="dropdown-item" href="{{ route('landingView.index') }}">Homepage</a >
                                 <!--<a class="dropdown-item" href="#"
                                     >Second Item</a
                                 ><a class="dropdown-item" href="#"
-                                    >Third Item</a
+                                    >Third Item=</a
                                 >-->
                             </div>
                         </li>
@@ -591,7 +607,7 @@
                                 >Pages</a
                             >
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('books.showAll') }}">Library</a>
+                                <a class="dropdown-item" href="{{ route('books.showAll') }}">Library</a >
                                 <!--<a class="dropdown-item" href="#"
                                     >Second Item</a
                                 ><a class="dropdown-item" href="#"
@@ -674,298 +690,221 @@
         <!-- End: Hero Parallax -->
         <section class="fw-normal" style="margin-top: 40px">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-lg-3 col-xl-3 col-xxl-3">
-                        <div class="card bg-body-secondary bg-opacity-75 d-xxl-flex justify-content-xxl-center"
-                            style=" width: initial;border-radius: 20px; border-style: none;border-top-style: none;" >
-                            <div class="card-body" style="border-top-style: none" >
-                                <h3 class="d-xl-flex d-xxl-flex justify-content-xl-start justify-content-xxl-start align-items-xxl-center card-title" style="font-weight: bold" >
-                                    Top 5 This Week
-                                </h3>
-                                @foreach($popularBooks as $book)
-                                    <hr style="width: inherit" />
-                                        <div class="align-content-center">
-                                            <div class="col d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-lg-center justify-content-xl-center justify-content-xxl-center" style="margin-top: 14px; >
-                                                <picture class="d-xl-flex d-xxl-flex justify-content-xl-center justify-content-xxl-center" style="width: 80px">
-                                                    <img
-                                                        class="img-fluid border rounded"
-                                                        src="/assets/img/Asset%201.png?h=5b3d64bc53126679d6091568004b9ab7"/>
-                                                </picture>
-                                                <div
-                                                    class="text-start d-flex flex-column justify-content-xxl-center" style=" margin-left: 15px; margin-right: 15px; " >
-                                                    <a href="{{ url('/book/' . $book->id) }}" style="text-decoration: none;">
-                                                        <h5 class="card-title" style="color: rgb(55, 58, 60)">{{ $book->title }}</h5>
-                                                    </a>
-                                                    <p>{{ $book->author }}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <hr
-                                @endforeach
-            
-                                    style="
-                                        width: inherit;
-                                        margin-top: 28px;
-                                        margin-bottom: 28px;
-                                    "
-                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-xl-9 col-xxl-9">
-                    <div class="row" style="margin-bottom: 0px; padding-top: 12px" >
-                            <div class="col-7 col-sm-8 col-md-9 col-lg-9 col-xl-10 col-xxl-10">
-                             <h3 style="font-weight: bold; margin-bottom: 20px;">Popular Books</h3>
-                             <hr />
-                         </div>
-                    <div class="col text-end">
-                        <a class="btn" role="button" href="{{ route('books.showAll') }}"style="
-                                color: #ffffff;
-                                border-radius: 30px;
-                                width: inherit;
-                                border-style: none;
-                                border-color: #334b35;
-                                background: #334b35;
-                                height: 40px; 
-                                font-weight: bold; " >
-                            View all
-                        </a>
-                    </div>
-                </div>
-
-                <div class="row d-flex justify-content-start flex-nowrap">
-                @foreach($popularBooks as $book)
-                    <div class="col-2 mb-4">
-                        <div class="card border-0" style="width: 100%; overflow: hidden;">
-                            <!-- Image Section -->
-                            <div class="d-flex justify-content-center mb-3">
-                                <img 
-                                    src="{{ $book->image_url }}" 
-                                    alt="{{ $book->title }}" 
-                                    class="img-fluid" 
-                                    style="border-radius: 20px; width: 100%; height: auto;"
-                                />
-                            </div>
-
-                            <!-- Book Details -->
-                            <div class="card-body d-flex flex-column">
-                                <!-- Title -->
-                                <a href="{{ url('/book/' . $book->id) }}" style="text-decoration: none;">
-                                    <h4 class="card-title" style="color: rgb(55, 58, 60); max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                        {{ $book->title }}
-                                    </h4>
-                                </a>
-
-                                <!-- Rating -->
-                                <div class="d-flex mb-2">
-                                    @for ($i = 0; $i < 5; $i++)
-                                        <i class="fas fa-star" style="color: {{ $i < $book->rating ? 'var(--bs-yellow)' : 'rgb(174, 174, 174)' }};"></i>
-                                    @endfor
+                <div class="row" id="account">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col"><h1>Account</h1></div>
+                        <hr />
+                        <div
+                                class="col d-flex d-lg-flex d-xl-flex justify-content-end justify-content-lg-end justify-content-xl-end"
+                            >
+                        <!-- Start: Form -->
+                        <form class="d-xl-flex d-xxl-flex px-4 py-4" style="width: inherit">
+                            <div class="row d-xxl-flex mb-2" style="width: inherit" >
+                                <div class="col-xxl-6">
+                                    <label class="form-label" style="font-size: 18px">Username</label >
+                                    <input class="form-control" type="text"style=" border-radius: 8px;background: #f5f6fa;"name="title" value="{{ $currentUser->username }}" readonly=""/>
                                 </div>
-
-                                <!-- Author -->
-                                <p class="card-text" style="font-size: 0.9rem; color: rgb(104, 104, 104);">
-                                    {{ $book->author }}
-                                </p>
+                                <div class="col">
+                                    <label class="form-label" style="font-size: 18px" >Birthday</label>
+                                    <input class="form-control"type="date"style="background: #f5f6fa; border-radius: 8px;" value="{{ $currentUser->birthday }}" readonly=""/>
+                                </div>
+                                <div class="col">
+                                    <label class="form-label" style="font-size: 18px" >Account Creation Date</label>
+                                    <input class="form-control"type="date" style=" background: #f5f6fa; border-radius: 8px;" value="{{ $currentUser->created_at->toDateString() }}" readonly=""/>
+                                </div>
                             </div>
-                        </div>
+                        </form>
+                        <!-- End: Form -->
                     </div>
-                @endforeach
-            </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col"><h1>Request a Book</h1></div>
+                            <div
+                                class="col d-flex d-lg-flex d-xl-flex justify-content-end justify-content-lg-end justify-content-xl-end"
+                            >
+                                <!-- Button to trigger modal -->
+                                <button
+                                    class="btn btn-primary d-xxl-flex justify-content-xxl-center align-items-xxl-center"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#confirmationModal"
+                                    style="border-radius: 11px; border-style: none; font-size: 20px; color: rgb(255, 255, 255);"
+                                >
+                                    Confirm&nbsp;
+                                </button>
 
-                    <div class="row"style="margin-bottom: 0px; margin-top: 22px" >
-                        <div class="col-7 col-sm-8 col-md-9 col-lg-9 col-xl-10 col-xxl-10" >
-                             <h3 style="font-weight: bold">
-                                Top Rated Books
-                            </h3>
-                             <hr />
-                            </div>
-                            <div class="col text-end">
-                                <a class="btn" role="button"
-                                    href="{{ route('books.showAll') }}" style="
-                                        color: #ffffff;
-                                        border-radius: 30px;
-                                        width: inherit;
-                                        border-style: none;
-                                        border-color: #334b35;
-                                        background: #334b35;
-                                        height: 40px; "
-                                    ><strong>View all</strong></a>
-                            </div>
-                        </div>
-                        <div class="row d-flex justify-content-start flex-nowrap">
-                            @foreach($popularBooks as $book)
-                                <div class="col-2 mb-4">
-                                    <div class="card border-0" style="width: 100%; overflow: hidden;">
-                                        <!-- Image Section -->
-                                        <div class="d-flex justify-content-center mb-3">
-                                            <img 
-                                                src="{{ $book->image_url }}" 
-                                                alt="{{ $book->title }}" 
-                                                class="img-fluid" 
-                                                style="border-radius: 20px; width: 100%; height: auto;"
-                                            />
-                                        </div>
-
-                                        <!-- Book Details -->
-                                        <div class="card-body d-flex flex-column">
-                                            <!-- Title -->
-                                            <a href="{{ url('/book/' . $book->id) }}" style="text-decoration: none;">
-                                                <h4 class="card-title" style="color: rgb(55, 58, 60); max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                                    {{ $book->title }}
-                                                </h4>
-                                            </a>
-
-                                            <!-- Rating -->
-                                            <div class="d-flex mb-2">
-                                                @for ($i = 0; $i < 5; $i++)
-                                                    <i class="fas fa-star" style="color: {{ $i < $book->rating ? 'var(--bs-yellow)' : 'rgb(174, 174, 174)' }};"></i>
-                                                @endfor
+                                <!-- Modal -->
+                                <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="confirmationModalLabel">Book Submission Confirmation</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
-
-                                            <!-- Author -->
-                                            <p class="card-text" style="font-size: 0.9rem; color: rgb(104, 104, 104);">
-                                                {{ $book->author }}
-                                            </p>
+                                            <div class="modal-body">
+                                                Thank you for submitting your book request. 
+                                                <br>We would like to inform you that your submission is currently under review by our admin team. Once approved, your book will be posted on our website for public viewing. 
+                                                </br>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" onclick="submitForm()">Confirm</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
-                        </div>
 
-                    </div>
-                </div>
-                <div
-                    class="row gy-3 d-block d-md-flex d-lg-flex d-xl-flex d-xxl-flex"
-                    style="margin-top: 22px; margin-bottom: 22px"
-                >
-                    <div
-                        class="col-lg-4 col-xl-4 col-xxl-4"
-                        style="height: inherit"
-                    >
-                        <div
-                            class="card"
-                            style="border-radius: 20px; height: inherit"
-                        >
-                            <img
-                                class="img-fluid card-img w-100 d-block"
-                                src="/assets/img/card1.jpg?h=1e103aba7f44d8ff412d2c6411f211a3"
-                                width="449"
-                                height="212"
-                                style="filter: grayscale(0%); height: inherit"
-                            />
-                            <div
-                                class="card-img-overlay"
-                                style="
-                                    padding-left: 38px;
-                                    padding-right: 38px;
-                                    padding-top: 37px;
-                                    padding-bottom: 37px;
-                                "
-                            >
-                                <p style="margin-bottom: 2px">
-                                    new year, new books
-                                </p>
-                                <h2 style="color: rgb(55, 58, 60)">
-                                    <strong>The Best New</strong><br /><strong
-                                        >Books of January</strong
-                                    >
-                                </h2>
-                                <div>
-                                    <a
-                                        class="btn btn-lg"
-                                        role="button"
-                                        href="#"
-                                        style="
-                                            border-color: #334b35;
-                                            color: #334b35;
-                                            border-radius: 30px;
-                                            width: 163.375px;
-                                            --bs-primary: #334b35;
-                                            --bs-primary-rgb: 51, 75, 53;
-                                        "
-                                        >Read Now<svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="1em"
-                                            height="1em"
-                                            fill="currentColor"
-                                            viewBox="0 0 16 16"
-                                            class="bi bi-arrow-right"
-                                            style="margin-left: 6px"
-                                        >
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                                            ></path></svg
-                                    ></a>
-                                </div>
+                                <script>
+                                    function submitForm() {
+                                        // Submit the form after the user confirms
+                                        document.getElementById("addBookForm").submit();
+                                    }
+                                </script>
                             </div>
                         </div>
-                    </div>
-                    <div
-                        class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8"
-                    >
-                        <div
-                            class="card"
-                            style="
-                                height: inherit;
-                                border-radius: 20px;
-                                background: rgb(255, 255, 255);
-                            "
-                        >
-                            <img
-                                class="card-img w-100 d-block"
-                                src="/assets/img/card2.png?h=4766acb7345fa7c554e4900ba317d359"
-                            />
-                            <div
-                                class="card-img-overlay"
-                                style="
-                                    padding-left: 38px;
-                                    padding-right: 38px;
-                                    height: inherit;
-                                    padding-top: 35px;
-                                    padding-bottom: 35px;
-                                "
-                            >
-                                <p style="margin-bottom: 2px">
-                                    Grab limited-time offers
-                                </p>
-                                <h2 style="color: rgb(55, 58, 60)">
-                                    <strong>Uncover Exclusive </strong
-                                    ><br /><strong
-                                        >Deals on Must-Read Books!</strong
-                                    >
-                                </h2>
-                                <div>
-                                    <a
-                                        class="btn btn-lg"
-                                        role="button"
-                                        href="#"
-                                        style="
-                                            border-color: #334b35;
-                                            color: #334b35;
-                                            border-radius: 30px;
-                                            width: 163.375px;
-                                            --bs-primary: #334b35;
-                                            --bs-primary-rgb: 51, 75, 53;
-                                        "
-                                        >Read Now<svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="1em"
-                                            height="1em"
-                                            fill="currentColor"
-                                            viewBox="0 0 16 16"
-                                            class="bi bi-arrow-right"
-                                            style="margin-left: 6px"
-                                        >
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                                            ></path></svg
-                                    ></a>
+                        <hr />
+                        <!-- start here -->
+                        <form method="POST" action="{{ route('book.store') }}" class="px-4 py-4" id="addBookForm">
+                            @csrf 
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <label class="form-label" style="font-size: 18px;">Title</label>
+                                    <input class="form-control" type="text" style="border-radius: 8px; background: #f5f6fa;" name="title" required />
+                                </div>
+                                <div class="col">
+                                    <label class="form-label" style="font-size: 18px;">Language</label>
+                                    <select class="form-select" style="border-radius: 8px; background: #f5f6fa;" name="language" required>
+                                        <optgroup label="Select Language">
+                                            <option value="English" selected>English</option>
+                                            <option value="Mandarin Chinese">Mandarin Chinese</option>
+                                            <option value="Spanish">Spanish</option>
+                                            <option value="German">German</option>
+                                            <option value="French">French</option>
+                                            <option value="Japanese">Japanese</option>
+                                            <option value="Russian">Russian</option>
+                                            <option value="Portuguese">Portuguese</option>
+                                            <option value="Arabic">Arabic</option>
+                                            <option value="Hindi">Hindi</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label class="form-label" style="font-size: 18px;">Number of Pages</label>
+                                    <input class="form-control" type="text" style="border-radius: 8px; background: #f5f6fa;" name="format" required />
                                 </div>
                             </div>
-                        </div>
+                            <div class="row mb-2">
+                                <div class="col-xl-8">
+                                    <label class="form-label" style="font-size: 18px;">Author/Writer</label>
+                                    <input class="form-control" type="text" style="border-radius: 8px; background: #f5f6fa;" name="author" required />
+                                </div>
+                                <div class="col-xl-4 col-xxl-4">
+                                    <label class="form-label" style="font-size: 18px;">Published Year</label>
+                                    <input class="form-control" type="date" style="border-radius: 8px; background: #f5f6fa;" name="published" required />
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <label class="form-label" style="font-size: 18px;">About Author/Writer</label>
+                                    <textarea class="form-control" style="border-radius: 8px; background: #f5f6fa;" name="about_author" required ></textarea>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <label class="form-label" style="font-size: 18px;">Books Description</label>
+                                    <textarea class="form-control" style="border-radius: 8px; background: #f5f6fa;" name="about" required ></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label mt-2" style="font-size: 18px;">Genres</label>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-action" name="genres[]" value="Action & Adventure" />
+                                                <label class="form-check-label" for="genre-action">Action & Adventure</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-animals" name="genres[]" value="Animals" />
+                                                <label class="form-check-label" for="genre-animals">Animals</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-activity" name="genres[]" value="Activity Books" />
+                                                <label class="form-check-label" for="genre-activity">Activity Books</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-children" name="genres[]" value="Children" />
+                                                <label class="form-check-label" for="genre-children">Children</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-anthologies" name="genres[]" value="Anthologies" />
+                                                <label class="form-check-label" for="genre-anthologies">Anthologies</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-contemporary" name="genres[]" value="Contemporary" />
+                                                <label class="form-check-label" for="genre-contemporary">Comedy</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-cultural" name="genres[]" value="Cultural" />
+                                                <label class="form-check-label" for="genre-cultural">Cultural</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-european" name="genres[]" value="European" />
+                                                <label class="form-check-label" for="genre-european">European</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-fantasy" name="genres[]" value="Fantasy" />
+                                                <label class="form-check-label" for="genre-fantasy">Fantasy</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-arts" name="genres[]" value="Arts & Literature" />
+                                                <label class="form-check-label" for="genre-arts">Arts & Literature</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-classics" name="genres[]" value="Classics" />
+                                                <label class="form-check-label" for="genre-classics">Classics</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-contemporary" name="genres[]" value="Contemporary" />
+                                                <label class="form-check-label" for="genre-contemporary">Romance</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-foreign" name="genres[]" value="Foreign Language" />
+                                                <label class="form-check-label" for="genre-foreign">Foreign Language</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-genre-fiction" name="genres[]" value="Genre Fiction" />
+                                                <label class="form-check-label" for="genre-genre-fiction">Genre Fiction</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18 px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-historical" name="genres[]" value="Historical" />
+                                                <label class="form-check-label" for="genre-historical">Historical</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-uncategorized" name="genres[]" value="Uncategorized" />
+                                                <label class="form-check-label" for="genre-uncategorized">Uncategorized</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-contemporary" name="genres[]" value="Contemporary" />
+                                                <label class="form-check-label" for="genre-contemporary">Contemporary</label>
+                                            </div>
+                                            <div class="form-check" style="font-size: 18px; margin-top: 13px; margin-bottom: 13px; padding-left: 40px;">
+                                                <input class="form-check-input" type="checkbox" id="genre-contemporary" name="genres[]" value="Contemporary" />
+                                                <label class="form-check-label" for="genre-contemporary">Horror</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End: Form -->
                     </div>
                 </div>
             </div>
@@ -1257,6 +1196,6 @@
         </footer>
         <!-- End: Footer Multi Column -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="/assets/js/script.min.js?h=42e179a2e595b4eeb9ac584933481d19"></script>
+        <script src="/assets/js/script.min.js?h=5ffb1aee1fa3cf87c2229ba746eff526"></script>
     </body>
 </html>

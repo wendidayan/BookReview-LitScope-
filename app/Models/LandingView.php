@@ -16,11 +16,13 @@ class LandingView extends Model
     protected $fillable = [
         'title',
         'author',
+        'rating',
         'genres',
         'published',
         'format',
         'language',
         'about',
+        'review',
         'about_author',
         'approval_status',
     ];

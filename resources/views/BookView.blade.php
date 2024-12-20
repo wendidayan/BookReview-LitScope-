@@ -235,12 +235,12 @@
                                 >Vendor</a
                             >
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">First Item</a
-                                ><a class="dropdown-item" href="#"
+                                <a class="dropdown-item" href="{{ route('landingView.index') }}">Homepage</a>
+                                <!--<a class="dropdown-item" href="#"
                                     >Second Item</a
                                 ><a class="dropdown-item" href="#"
                                     >Third Item</a
-                                >
+                                >-->
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -257,12 +257,12 @@
                                 >Pages</a
                             >
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">First Item</a
-                                ><a class="dropdown-item" href="#"
+                                <a class="dropdown-item" href="{{ route('books.showAll') }}">Library</a>
+                                <!--<a class="dropdown-item" href="#"
                                     >Second Item</a
                                 ><a class="dropdown-item" href="#"
                                     >Third Item</a
-                                >
+                                >-->
                             </div>
                         </li>
                         <li class="nav-item">
@@ -274,12 +274,12 @@
                         >
                             <a
                                 class="nav-link"
-                                href="#"
+                                href="{{ route('myprofile') }}"
                                 style="
                                     border-top-style: solid;
                                     border-top-color: rgba(179, 179, 179, 0.65);
                                 "
-                                >Account</a
+                                >{{ $currentUser->username }}</a
                             >
                         </li>
                     </ul>
@@ -524,7 +524,7 @@
                     <ul class="navbar-nav me-auto"></ul>
                     <a
                         class="d-md-flex d-lg-flex d-xxl-flex justify-content-md-center justify-content-lg-center align-items-xxl-center"
-                        href="#"
+                        href="{{ route('myprofile') }}"
                         style="
                             text-decoration: none;
                             border-style: none;
@@ -532,7 +532,7 @@
                             color: rgba(0, 0, 0, 0.65);
                             margin-left: 24px;
                         "
-                        >Account<svg
+                        >{{ $currentUser->username }}<svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="1em"
                             height="1em"
@@ -570,12 +570,12 @@
                                 >Vendor</a
                             >
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">First Item</a
-                                ><a class="dropdown-item" href="#"
+                                <a class="dropdown-item" href="{{ route('landingView.index') }}">Homepage</a >
+                                <!--<a class="dropdown-item" href="#"
                                     >Second Item</a
                                 ><a class="dropdown-item" href="#"
                                     >Third Item</a
-                                >
+                                >-->
                             </div>
                         </li>
                         <li
@@ -595,12 +595,12 @@
                                 >Pages</a
                             >
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">First Item</a
-                                ><a class="dropdown-item" href="#"
+                                <a class="dropdown-item" href="{{ route('books.showAll') }}">Library</a>
+                                <!--<a class="dropdown-item" href="#"
                                     >Second Item</a
                                 ><a class="dropdown-item" href="#"
                                     >Third Item</a
-                                >
+                                >-->
                             </div>
                         </li>
                         <li class="nav-item">
@@ -763,18 +763,18 @@
                 </h4>
 
                 <!-- Ratings -->
-                <div class="d-flex mb-2" style="margin-top: 8px; margin-bottom: 8px;">
+                <!--<div class="d-flex mb-2" style="margin-top: 8px; margin-bottom: 8px;">
                     @for ($i = 0; $i < 5; $i++)
                         <i class="fas fa-star" 
                            style="color: {{ $i < $book->rating ? 'var(--bs-yellow)' : 'rgb(174, 174, 174)' }}; font-size: 25px;">
                         </i>
                     @endfor
-                </div>
+                </div>-->
 
                 <!-- Ratings Label -->
-                <label class="form-label">
+                <!--<label class="form-label">
                     {{ number_format($book->ratings) }} ratings · {{ number_format($book->reviews) }} reviews
-                </label>
+                </label>-->
 
                 <!-- Book Description -->
                 <p style="margin-top: 10px; margin-bottom: 10px;">
@@ -858,272 +858,119 @@
                                     <a class="btn btn-lg" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-2" href="#collapse-2" role="button" style="margin-top: 12px; margin-bottom: 12px; font-size: 16px; font-weight: bold; padding-left: 8px; padding-right: 8px;">Read more</a>
                                 </div>
                             </div>
-                        </div>
-                        
-                                       
-                               
- 
- <div class="tab-pane" role="tabpanel" id="tab-2" style="padding: 30px 0px;">
-    @if ($book->comments->count())
-        @foreach ($book->comments as $comment)
-            <!-- Main Comment Card -->
-            <div class="card" style="border-radius: 20px; margin-top: 21px; margin-bottom: 21px;">
-                <div class="card-body" style="padding: 33px;">
-                    <div class="row">
-                        <div class="col-xl-1 col-xxl-1">
-                            <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="70" height="68" src="/assets/img/clipboard-image.png?h=43b8a6f883618259a5250ba5ddfd4f8f" />
-                        </div>
-                        <div class="col">
-                            <div class="d-flex align-items-xl-center">
-                                <div style="margin-top: 10px; margin-bottom: 10px;">
-                                    <div class="d-flex" style="margin-top: 3px; margin-bottom: 3px;">
-                                      @for ($i = 0; $i < 5; $i++)
-                                            <i class="fas fa-star" style="color: {{ $i < $comment->rating ? 'var(--bs-yellow)' : 'rgb(174, 174, 174)' }}; font-size: 25px;"></i>
-                                        @endfor
-                                    </div>
-                                    <div style="margin-bottom: 15px;">
-                                        <p class="fw-bold mb-0" style="font-size: 18px;">
-                                            {{ $comment->user ? $comment->user->username : 'Anonymous' }}
-                                        </p>
-                                        <p>
-                                            <span style="color: rgb(153, 153, 153);">({{ $comment->created_at }})</span>
-                                        </p>
-                                        <p>{{ $comment->comment }}</p>
-                                    </div>
+                        </div>  
+                        <div class="tab-pane" role="tabpanel" id="tab-2" style="padding: 30px 0px;">
+                            @if ($book->comments->count())
+                                @foreach ($book->comments as $comment)
+                                    <!-- Main Comment Card -->
+                                    <div class="card" style="border-radius: 20px; margin-top: 21px; margin-bottom: 21px;">
+                                        <div class="card-body" style="padding: 33px;">
+                                            <div class="row">
+                                                <div class="col-xl-1 col-xxl-1">
+                                                    <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="70" height="68" src="/assets/img/clipboard-image.png?h=43b8a6f883618259a5250ba5ddfd4f8f" />
+                                                </div>
+                                                <div class="col">
+                                                    <div class="d-flex align-items-xl-center">
+                                                        <div style="margin-top: 10px; margin-bottom: 10px;">
+                                                            <div class="d-flex" style="margin-top: 3px; margin-bottom: 3px;">
+                                                            @for ($i = 0; $i < 5; $i++)
+                                                                    <i class="fas fa-star" style="color: {{ $i < $comment->rating ? 'var(--bs-yellow)' : 'rgb(174, 174, 174)' }}; font-size: 25px;"></i>
+                                                                @endfor
+                                                            </div>
+                                                            <div style="margin-bottom: 15px;">
+                                                                <p class="fw-bold mb-0" style="font-size: 18px;">
+                                                                    {{ $comment->user ? $comment->user->username : 'Anonymous' }}
+                                                                </p>
+                                                                <p>
+                                                                    <span style="color: rgb(153, 153, 153);">({{ $comment->created_at }})</span>
+                                                                </p>
+                                                                <p>{{ $comment->comment }}</p>
+                                                            </div>
 
-                                    <!-- Reply Link -->
-                                    <a href="javascript:void(0)" onclick="toggleReplyForm({{ $comment->id }})">Reply</a>
+                                                            <!-- Reply Link -->
+                                                            <a href="javascript:void(0)" onclick="toggleReplyForm({{ $comment->id }})">Reply</a>
 
-                                    <!-- Hidden Reply Form -->
-                                    <form id="reply-form-{{ $comment->id }}" method="POST" action="{{ route('comments.reply', $comment->id) }}" style="display: none; margin-top: 10px;">
-                                        @csrf
-                                        <input type="hidden" name="book_id" value="{{ $book->id }}">
-                                        <textarea name="reply" placeholder="Write your reply..." required></textarea>
-                                        <button type="submit">Submit</button>
-                                    </form>
+                                                            <!-- Hidden Reply Form -->
+                                                            <form id="reply-form-{{ $comment->id }}" method="POST" action="{{ route('comments.reply', $comment->id) }}" style="display: none; margin-top: 10px;">
+                                                                @csrf
+                                                                <input type="hidden" name="book_id" value="{{ $book->id }}">
+                                                                <textarea name="reply" placeholder="Write your reply..." required></textarea>
+                                                                <button type="submit">Submit</button>
+                                                            </form>
 
-                                    <!-- Nested Replies Section -->
-                                    @if ($comment->replies->count())
-                                        <div class="nested-replies" style="margin-left: 20px; margin-top: 20px;">
-                                            @include('partials.reply', ['replies' => $comment->replies])
+                                                            <!-- Nested Replies Section -->
+                                                            @if ($comment->replies->count())
+                                                                <div class="nested-replies" style="margin-left: 20px; margin-top: 20px;">
+                                                                    @include('partials.reply', ['replies' => $comment->replies])
+                                                                </div>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    @endif
+                                    </div>
+                                @endforeach
+                            @endif
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 col-lg-8 col-xl-7 col-xxl-6">
+                                <div class="rateSec text-center p-4">
+                                    <!-- Rating Section -->
+                                    <div class="row mb-3">
+                                        <div class="col-12 d-flex justify-content-center align-items-center">
+                                            <label class="form-label me-3" for="ratings" style="font-size: 18px;">
+                                                <strong>Your rating</strong>
+                                            </label>
+                                            <div class="d-flex">
+                                                <!-- Star Rating System -->
+                                                @for ($i = 1; $i <= 5; $i++)
+                                                    <span 
+                                                        class="star mx-1"
+                                                        data-value="{{ $i }}"
+                                                        style="font-size: 30px; color: gray; cursor: pointer; transition: color 0.3s;"
+                                                    >
+                                                        &#9733;
+                                                    </span>
+                                                @endfor
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Comment Form -->
+                                    <div class="row">
+                                        <form method="POST" action="{{ route('storeComment', $book->id) }}" class="w-100">
+                                            @csrf 
+                                            <!-- Comment Textarea -->
+                                            <div class="mb-4">
+                                                <textarea
+                                                    name="comment"
+                                                    class="form-control"
+                                                    style="height: 160px; border-radius: 20px; padding: 14px;"
+                                                    placeholder="Your review"
+                                                    required
+                                                ></textarea>
+                                            </div>
+                                            
+                                            <!-- Hidden Rating Field -->
+                                            <input type="hidden" name="rating" id="rating" required>
+                                            
+                                            <!-- Submit Button -->
+                                            <div class="d-flex justify-content-center">
+                                                <button
+                                                    class="btn btn-success"
+                                                    type="submit"
+                                                    style="border-radius: 30px; width: 140px; height: 50px; background: #334b35; border-color: #4caf50;"
+                                                >
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-    @endif
-</div>
 
-                                                
-               <!--                                 
-                                              
-                                                <hr
-                                                    style="
-                                                        margin-top: 46px;
-                                                        margin-bottom: 46px;
-                                                    "
-                                                />
-                                                <div class="row">
-                                                    <div class="col"></div>
-                                                    <div
-                                                        class="col-md-8 col-lg-8 col-xl-7 col-xxl-6"
-                                                    >
-                                                        <div
-                                                            style="width: auto"
-                                                            class="rateSec"
-                                                        >
-                                                            <div class="row">
-                                                                <div
-                                                                    class="col-xxl-12 d-flex"
-                                                                    style="
-                                                                        width: 604px;
-                                                                    "
-                                                                >
-                                                                    <label
-                                                                        class="form-label"
-                                                                        for="ratings"
-                                                                        style="
-                                                                            font-size: 18px;
-                                                                        "
-                                                                        ><strong
-                                                                            >Your
-                                                                            rating</strong
-                                                                        ></label
-                                                                    >
-                                                                    <div
-                                                                        class="d-flex align-items-xxl-center"
-                                                                        style="
-                                                                            margin-top: 3px;
-                                                                            margin-bottom: 3px;
-                                                                            margin-left: 20px;
-                                                                            margin-right: 20px;
-                                                                        "
-                                                                    >
-                                                                        <i
-                                                                            class="fas fa-star"
-                                                                            style="
-                                                                                color: var(
-                                                                                    --bs-yellow
-                                                                                );
-                                                                                font-size: 15px;
-                                                                            "
-                                                                        ></i
-                                                                        ><i
-                                                                            class="fas fa-star"
-                                                                            style="
-                                                                                color: var(
-                                                                                    --bs-yellow
-                                                                                );
-                                                                                font-size: 15px;
-                                                                            "
-                                                                        ></i
-                                                                        ><i
-                                                                            class="fas fa-star"
-                                                                            style="
-                                                                                color: var(
-                                                                                    --bs-yellow
-                                                                                );
-                                                                                font-size: 15px;
-                                                                            "
-                                                                        ></i
-                                                                        ><i
-                                                                            class="fas fa-star"
-                                                                            style="
-                                                                                color: var(
-                                                                                    --bs-yellow
-                                                                                );
-                                                                                font-size: 15px;
-                                                                            "
-                                                                        ></i
-                                                                        ><svg
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            width="1em"
-                                                                            height="1em"
-                                                                            fill="currentColor"
-                                                                            viewBox="0 0 16 16"
-                                                                            class="bi bi-star"
-                                                                            style="
-                                                                                color: rgb(
-                                                                                    174,
-                                                                                    174,
-                                                                                    174
-                                                                                );
-                                                                                font-size: 15px;
-                                                                            "
-                                                                        >
-                                                                            <path
-                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
-                                                                            ></path>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                            </div>                                                          
-                                          
-<div class="row" style="width: inherit;">
-    <form method="POST" action="{{ route('storeComment', $book->id) }}">
-        @csrf 
-        <div class="col" style="margin-top: 16px; margin-bottom: 16px;">
-            <textarea
-                name="comment"
-                style="
-                    width: inherit;
-                    height: 160px;
-                    max-height: 160px;
-                    min-height: 160px;
-                    border-radius: 20px;
-                    border-style: solid;
-                    border-color: #a7a7a7;
-                    padding-left: 14px;
-                    padding-right: 14px;
-                    padding-top: 14px;
-                    padding-bottom: 14px;
-                "
-                placeholder="Your review"
-                required
-            ></textarea>
-        </div>
-        <div class="row">
-         
-         
-        </div>
-        <div class="row">
-            <div class="col" style="margin-top: 15px; margin-bottom: 15px;">
-                <button
-                    class="btn"
-                    type="submit"
-                    style="
-                        color: #ffffff;
-                        border-radius: 30px;
-                        width: 140px;
-                        --bs-primary: #334b35;
-                        --bs-primary-rgb: 51, 75, 53;
-                        height: 50px;
-                        background: #334b35;
-                        border-color: #4caf50;
-                    "
-                >
-                    Submit
-                </button>
-            </div>
-        </div>
-    </form>
-</div>
-
--->
-
-
-
-
-<div class="row">
-    <div class="col-md-8 col-lg-8 col-xl-7 col-xxl-6">
-        <div class="rateSec">
-            <div class="row">
-                <div class="col-xxl-12 d-flex">
-                    <label class="form-label" for="ratings" style="font-size: 18px;">
-                        <strong>Your rating</strong>
-                    </label>
-                    <div class="d-flex align-items-xxl-center" style="margin-top: 3px; margin-bottom: 3px; margin-left: 20px; margin-right: 20px;">
-                        <!-- Star Rating System with Inline CSS -->
-                        <span class="star" data-value="1" style="font-size: 30px; color: gray; cursor: pointer; transition: color 0.3s;">&#9733;</span>
-                        <span class="star" data-value="2" style="font-size: 30px; color: gray; cursor: pointer; transition: color 0.3s;">&#9733;</span>
-                        <span class="star" data-value="3" style="font-size: 30px; color: gray; cursor: pointer; transition: color 0.3s;">&#9733;</span>
-                        <span class="star" data-value="4" style="font-size: 30px; color: gray; cursor: pointer; transition: color 0.3s;">&#9733;</span>
-                        <span class="star" data-value="5" style="font-size: 30px; color: gray; cursor: pointer; transition: color 0.3s;">&#9733;</span>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="width: inherit;">
-                <form method="POST" action="{{ route('storeComment', $book->id) }}">
-                    @csrf 
-                    <div class="col" style="margin-top: 16px; margin-bottom: 16px;">
-                        <textarea
-                            name="comment"
-                            style="width: inherit; height: 160px; max-height: 160px; min-height: 160px; border-radius: 20px; border-style: solid; border-color: #a7a7a7; padding-left: 14px; padding-right: 14px; padding-top: 14px; padding-bottom: 14px;"
-                            placeholder="Your review"
-                            required
-                        ></textarea>
-                    </div>
-                    <input type="hidden" name="rating" id="rating" required> <!-- Hidden field to store the rating value -->
-                    <div class="row">
-                        <div class="col" style="margin-top: 15px; margin-bottom: 15px;">
-                            <button
-                                class="btn"
-                                type="submit"
-                                style="color: #ffffff; border-radius: 30px; width: 140px; height: 50px; background: #334b35; border-color: #4caf50;"
-                            >
-                                Submit
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Inline JavaScript to handle star selection -->
 <script>
@@ -1139,7 +986,7 @@
                 // Add the 'selected' style to the clicked star and all previous stars
                 let ratingValue = parseInt(star.getAttribute('data-value')); // Get the value of the clicked star
                 for (let i = 0; i < ratingValue; i++) {
-                    stars[i].style.color = 'yellow'; // Turn previous stars yellow
+                    stars[i].style.color = 'var(--bs-yellow)'; // Turn previous stars yellow
                 }
 
                 // Set the value of the hidden rating input to the selected rating
@@ -1204,585 +1051,43 @@
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                        <div
-                                                            class="row d-inline d-md-grid d-lg-flex d-xl-flex d-xxl-flex"
-                                                        >
-                                                            <div class="col">
-                                                                <div
-                                                                    class="d-flex"
-                                                                    style="
-                                                                        overflow: auto;
-                                                                    "
-                                                                >
-                                                                    <div
-                                                                        class="col"
-                                                                    >
-                                                                        <div
-                                                                            class="card border-0"
-                                                                            style="
-                                                                                border-style: none;
-                                                                            "
-                                                                        >
-                                                                            <div
-                                                                                class="card-body justify-content-evenly"
-                                                                                style="
-                                                                                    border-style: none;
-                                                                                    border-right-style: none;
-                                                                                "
-                                                                            >
-                                                                                <div
-                                                                                    class="d-xxl-flex justify-content-xxl-center"
-                                                                                    style="
-                                                                                        width: inherit;
-                                                                                    "
-                                                                                >
-                                                                                    <picture
-                                                                                        ><img
-                                                                                            class="img-fluid"
-                                                                                            src="/assets/img/Asset%202.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                                                            style="
-                                                                                                border-radius: 20px;
-                                                                                            "
-                                                                                            width="214"
-                                                                                            height="319"
-                                                                                    /></picture>
-                                                                                </div>
-                                                                                <a
-                                                                                    href="{{ url('/BookView') }}"
-                                                                                
-                                                                                    style="
-                                                                                        text-decoration: blink;
-                                                                                    "
-                                                                                    ><div
-                                                                                        style="
-                                                                                            margin-top: 15px;
-                                                                                            color: rgb(
-                                                                                                55,
-                                                                                                58,
-                                                                                                60
-                                                                                            );
-                                                                                        "
-                                                                                    >
-                                                                                        <h4
-                                                                                            style="
-                                                                                                max-width: 142px;
-                                                                                                max-height: 57px;
-                                                                                            "
-                                                                                        >
-                                                                                            Brida
-                                                                                        </h4>
-                                                                                        <div
-                                                                                            class="d-flex"
-                                                                                        >
-                                                                                            <i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i>
-                                                                                        </div>
-                                                                                        <p>
-                                                                                            Paulo
-                                                                                            Coelho
-                                                                                        </p>
-                                                                                    </div></a
-                                                                                >
+                                                        <div class="row d-flex justify-content-center">
+
+                                                            @foreach($popularBooks as $book)
+                                                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4">
+                                                                    <div class="card border-0">
+                                                                        <div class="card-body p-3 text-center">
+                                                                            <div class="d-flex justify-content-center">
+                                                                                <img 
+                                                                                    src="{{ $book->image_url }}" 
+                                                                                    alt="{{ $book->title }}" 
+                                                                                    class="img-fluid" 
+                                                                                    style="border-radius: 20px; width: 100%; height: auto;"
+                                                                                />
                                                                             </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col"
-                                                                    >
-                                                                        <div
-                                                                            class="card border-0"
-                                                                            style="
-                                                                                border-style: none;
-                                                                            "
-                                                                        >
-                                                                            <div
-                                                                                class="card-body justify-content-evenly"
-                                                                                style="
-                                                                                    border-style: none;
-                                                                                    border-right-style: none;
-                                                                                "
-                                                                            >
-                                                                                <div
-                                                                                    class="d-xxl-flex justify-content-xxl-center"
-                                                                                    style="
-                                                                                        width: inherit;
-                                                                                    "
-                                                                                >
-                                                                                    <picture
-                                                                                        ><img
-                                                                                            class="img-fluid"
-                                                                                            src="/assets/img/Asset%201.png?h=5b3d64bc53126679d6091568004b9ab7"
-                                                                                            style="
-                                                                                                border-radius: 20px;
-                                                                                            "
-                                                                                            width="214"
-                                                                                            height="317"
-                                                                                    /></picture>
+                                                                            <a href="{{ url('/book/' . $book->id) }}" style="text-decoration: none;">
+                                                                                <div class="mt-3" style="color: rgb(55, 58, 60);">
+                                                                                    <h4 style="max-width: 142px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                                                                        {{ $book->title }}
+                                                                                    </h4>
+                                                                                    <div class="d-flex justify-content-center">
+                                                                                        <i class="fas fa-star" style="color: var(--bs-yellow);"></i>
+                                                                                        <i class="fas fa-star" style="color: var(--bs-yellow);"></i>
+                                                                                        <i class="fas fa-star" style="color: var(--bs-yellow);"></i>
+                                                                                        <i class="fas fa-star" style="color: var(--bs-yellow);"></i>
+                                                                                        <i class="fas fa-star" style="color: var(--bs-yellow);"></i>
+                                                                                    </div>
+                                                                                    <p class="mt-2" style="font-size: 14px;">
+                                                                                        {{ $book->author }}
+                                                                                    </p>
                                                                                 </div>
-                                                                                <a
-                                                                                    href="{{ url('/BookView') }}"
-                                                                                    style="
-                                                                                        text-decoration: blink;
-                                                                                    "
-                                                                                    ><div
-                                                                                        style="
-                                                                                            margin-top: 15px;
-                                                                                            color: rgb(
-                                                                                                55,
-                                                                                                58,
-                                                                                                60
-                                                                                            );
-                                                                                        "
-                                                                                    >
-                                                                                        <h4
-                                                                                            style="
-                                                                                                max-width: 142px;
-                                                                                                max-height: 57px;
-                                                                                            "
-                                                                                        >
-                                                                                            Brida
-                                                                                        </h4>
-                                                                                        <div
-                                                                                            class="d-flex"
-                                                                                        >
-                                                                                            <i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i>
-                                                                                        </div>
-                                                                                        <p>
-                                                                                            Paulo
-                                                                                            Coelho
-                                                                                        </p>
-                                                                                    </div></a
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col"
-                                                                    >
-                                                                        <div
-                                                                            class="card border-0"
-                                                                            style="
-                                                                                border-style: none;
-                                                                            "
-                                                                        >
-                                                                            <div
-                                                                                class="card-body justify-content-evenly"
-                                                                                style="
-                                                                                    border-style: none;
-                                                                                    border-right-style: none;
-                                                                                "
-                                                                            >
-                                                                                <div
-                                                                                    class="d-xxl-flex justify-content-xxl-center"
-                                                                                    style="
-                                                                                        width: inherit;
-                                                                                    "
-                                                                                >
-                                                                                    <picture
-                                                                                        ><img
-                                                                                            class="img-fluid"
-                                                                                            src="/assets/img/Asset%203.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                                                            style="
-                                                                                                border-radius: 20px;
-                                                                                            "
-                                                                                            width="214"
-                                                                                            height="321"
-                                                                                    /></picture>
-                                                                                </div>
-                                                                                <a
-                                                                                    href="{{ url('/BookView') }}"
-                                                                                    style="
-                                                                                        text-decoration: blink;
-                                                                                    "
-                                                                                    ><div
-                                                                                        style="
-                                                                                            margin-top: 15px;
-                                                                                            color: rgb(
-                                                                                                55,
-                                                                                                58,
-                                                                                                60
-                                                                                            );
-                                                                                        "
-                                                                                    >
-                                                                                        <h4
-                                                                                            style="
-                                                                                                max-width: 142px;
-                                                                                                max-height: 57px;
-                                                                                            "
-                                                                                        >
-                                                                                            Brida
-                                                                                        </h4>
-                                                                                        <div
-                                                                                            class="d-flex"
-                                                                                        >
-                                                                                            <i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i>
-                                                                                        </div>
-                                                                                        <p>
-                                                                                            Paulo
-                                                                                            Coelho
-                                                                                        </p>
-                                                                                    </div></a
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col"
-                                                                    >
-                                                                        <div
-                                                                            class="card border-0"
-                                                                            style="
-                                                                                border-style: none;
-                                                                            "
-                                                                        >
-                                                                            <div
-                                                                                class="card-body justify-content-evenly"
-                                                                                style="
-                                                                                    border-style: none;
-                                                                                    border-right-style: none;
-                                                                                "
-                                                                            >
-                                                                                <div
-                                                                                    class="d-xxl-flex justify-content-xxl-center"
-                                                                                    style="
-                                                                                        width: inherit;
-                                                                                    "
-                                                                                >
-                                                                                    <picture
-                                                                                        ><img
-                                                                                            class="img-fluid"
-                                                                                            src="/assets/img/Asset%204.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                                                            style="
-                                                                                                border-radius: 20px;
-                                                                                            "
-                                                                                            width="214"
-                                                                                            height="317"
-                                                                                    /></picture>
-                                                                                </div>
-                                                                                <a
-                                                                                    href="{{ url('/BookView') }}"
-                                                                                    style="
-                                                                                        text-decoration: blink;
-                                                                                    "
-                                                                                    ><div
-                                                                                        style="
-                                                                                            margin-top: 15px;
-                                                                                            color: rgb(
-                                                                                                55,
-                                                                                                58,
-                                                                                                60
-                                                                                            );
-                                                                                        "
-                                                                                    >
-                                                                                        <h4
-                                                                                            style="
-                                                                                                max-width: 142px;
-                                                                                                max-height: 57px;
-                                                                                            "
-                                                                                        >
-                                                                                            Brida
-                                                                                        </h4>
-                                                                                        <div
-                                                                                            class="d-flex"
-                                                                                        >
-                                                                                            <i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i>
-                                                                                        </div>
-                                                                                        <p>
-                                                                                            Paulo
-                                                                                            Coelho
-                                                                                        </p>
-                                                                                    </div></a
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div
-                                                                        class="col"
-                                                                    >
-                                                                        <div
-                                                                            class="card border-0"
-                                                                            style="
-                                                                                border-style: none;
-                                                                            "
-                                                                        >
-                                                                            <div
-                                                                                class="card-body justify-content-evenly"
-                                                                                style="
-                                                                                    border-style: none;
-                                                                                    border-right-style: none;
-                                                                                "
-                                                                            >
-                                                                                <div
-                                                                                    class="d-xxl-flex justify-content-xxl-center"
-                                                                                    style="
-                                                                                        width: inherit;
-                                                                                    "
-                                                                                >
-                                                                                    <picture
-                                                                                        ><img
-                                                                                            class="img-fluid"
-                                                                                            src="/assets/img/Asset%205.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                                                            style="
-                                                                                                border-radius: 20px;
-                                                                                            "
-                                                                                            width="214"
-                                                                                            height="320"
-                                                                                    /></picture>
-                                                                                </div>
-                                                                                <a
-                                                                                    href="{{ url('/BookView') }}"
-                                                                                    style="
-                                                                                        text-decoration: blink;
-                                                                                    "
-                                                                                    ><div
-                                                                                        style="
-                                                                                            margin-top: 15px;
-                                                                                            color: rgb(
-                                                                                                55,
-                                                                                                58,
-                                                                                                60
-                                                                                            );
-                                                                                        "
-                                                                                    >
-                                                                                        <h4
-                                                                                            style="
-                                                                                                max-width: 142px;
-                                                                                                max-height: 57px;
-                                                                                            "
-                                                                                        >
-                                                                                            Brida
-                                                                                        </h4>
-                                                                                        <div
-                                                                                            class="d-flex"
-                                                                                        >
-                                                                                            <i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="fas fa-star"
-                                                                                                style="
-                                                                                                    color: var(
-                                                                                                        --bs-yellow
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i
-                                                                                            ><i
-                                                                                                class="far fa-star"
-                                                                                                style="
-                                                                                                    color: rgb(
-                                                                                                        174,
-                                                                                                        174,
-                                                                                                        174
-                                                                                                    );
-                                                                                                "
-                                                                                            ></i>
-                                                                                        </div>
-                                                                                        <p>
-                                                                                            Paulo
-                                                                                            Coelho
-                                                                                        </p>
-                                                                                    </div></a
-                                                                                >
-                                                                            </div>
+                                                                            </a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            @endforeach
                                                         </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -2070,8 +1375,7 @@
                             >
                         </div>
                         <p class="text-muted copyright">
-                            Sem eleifend donec molestie, integer quisque orci
-                            aliquam.
+                            The Bookish Corner for Every Avid Reader.
                         </p>
                     </div>
                     <!-- End: Social Icons -->

@@ -456,7 +456,7 @@
                                                 color: rgba(0, 0, 0, 0.65);
                                                 margin-left: 24px;
                                             "
-                                            >Account<svg
+                                            >{{ $currentUser->username }}  <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="1em"
                                                 height="1em"
@@ -480,15 +480,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xl-12 pt-3">
-                            <div
-                                class="card"
-                                style="
-                                    border-style: solid;
-                                    border-color: #e6eff1;
-                                    border-radius: 6px;
-                                    height: auto;
-                                "
-                            >
+                            <div class="card" style=" border-style: solid; border-color: #e6eff1; border-radius: 6px; height: auto; " >
                                 <div class="card-body px-5 py-5">
                                     <div class="row">
                                         <div class="col-xl-1 col-xxl-2">
@@ -500,23 +492,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div
-                                            class="col-xl-10 col-xxl-10 offset-xl-1 offset-xxl-0 d-flex justify-content-xl-end align-items-xl-center align-items-xxl-center"
-                                        >
-                                            <label
-                                                class="form-label d-xl-flex align-items-xl-center me-2"
-                                                style="
-                                                    margin-bottom: 1px;
-                                                    padding-bottom: 0px;
-                                                "
-                                                >Authors</label
-                                            ><select
-                                                class="d-xxl-flex me-4"
-                                                style="
-                                                    border-style: none;
-                                                    height: 30px;
-                                                "
-                                            >
+                                        <div class="col-xl-10 col-xxl-10 offset-xl-1 offset-xxl-0 d-flex justify-content-xl-end align-items-xl-center align-items-xxl-center">
+                                            <label class="form-label d-xl-flex align-items-xl-center me-2" style=" margin-bottom: 1px; padding-bottom: 0px; ">
+                                                Authors
+                                            </label>
+                                            <select class="d-xxl-flex me-4" style=" border-style: none; height: 30px; " >
                                                 <option value="1">
                                                     Arthur Gonzalez
                                                 </option>
@@ -537,21 +517,12 @@
                                                 </option>
                                                 <option value="7">
                                                     Suzanne Casey
-                                                </option></select
-                                            ><label
-                                                class="form-label d-xl-flex align-items-xl-center me-2"
-                                                style="
-                                                    margin-bottom: 1px;
-                                                    padding-bottom: 0px;
-                                                "
-                                                >Genres</label
-                                            ><select
-                                                class="d-xxl-flex me-4"
-                                                style="
-                                                    border-style: none;
-                                                    height: 30px;
-                                                "
-                                            >
+                                                </option>
+                                            </select>
+                                                <label class="form-label d-xl-flex align-items-xl-center me-2" style=" margin-bottom: 1px; padding-bottom: 0px; " >
+                                                    Genres
+                                                </label >
+                                            <select class="d-xxl-flex me-4" style=" border-style: none; height: 30px; ">
                                                 <option value="1">
                                                     Action &amp; Adventure
                                                 </option>
@@ -587,21 +558,12 @@
                                                 </option>
                                                 <option value="12">
                                                     Uncategorized
-                                                </option></select
-                                            ><label
-                                                class="form-label d-xl-flex align-items-xl-center"
-                                                style="
-                                                    margin-bottom: 1px;
-                                                    padding-bottom: 0px;
-                                                "
-                                                >Show</label
-                                            ><select
-                                                class="d-xxl-flex me-4"
-                                                style="
-                                                    border-style: none;
-                                                    height: 30px;
-                                                "
-                                            >
+                                                </option>
+                                            </select>
+                                            <label class="form-label d-xl-flex align-items-xl-center" style=" margin-bottom: 1px; padding-bottom: 0px; " >
+                                                Show
+                                            </label >
+                                            <select class="d-xxl-flex me-4"style=" border-style: none; height: 30px;" >
                                                 <option value="undefined">
                                                     5
                                                 </option>
@@ -611,15 +573,12 @@
                                                 <option value="">20</option>
                                                 <option value="">
                                                     30
-                                                </option></select
-                                            ><label
-                                                class="form-label d-xl-flex align-items-xl-center me-2"
-                                                style="
-                                                    margin-bottom: 1px;
-                                                    padding-bottom: 0px;
-                                                "
-                                                >Search</label
-                                            ><input type="search" />
+                                                </option>
+                                            </select >
+                                            <label class="form-label d-xl-flex align-items-xl-center me-2" style=" margin-bottom: 1px; padding-bottom: 0px; " >
+                                                Search
+                                            </label >
+                                            <input type="search" />
                                         </div>
                                     </div>
                                     <div class="row">
@@ -627,330 +586,100 @@
                                     </div>
                                     <div class="row">
                                         <!-- Start: BookCards -->
-                                        <div
-                                            class="col-sm-6 col-md-6 col-lg-12 col-xl-12"
-                                        >
-                                            <div
-                                                class="card border-0"
-                                                style="border-style: none"
-                                            >
-                                                <div
-                                                    class="card-body d-inline-flex justify-content-evenly"
-                                                    style="
-                                                        border-style: none;
-                                                        border-right-style: none;
-                                                    "
-                                                >
-                                                    <!-- Start: Book_img -->
-                                                    <div
-                                                        class="d-lg-flex d-xl-flex d-xxl-flex justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center justify-content-xxl-center"
-                                                        style="
-                                                            width: 1000.8594px;
-                                                        "
-                                                    >
-                                                        <picture
-                                                            ><img
-                                                                class="img-fluid"
-                                                                src="/assets/img/Asset%201.png?h=5b3d64bc53126679d6091568004b9ab7"
-                                                                width="128"
-                                                                height="190"
-                                                                style="
-                                                                    border-radius: 20px;
-                                                                    width: inherit;
-                                                                "
-                                                        /></picture>
-                                                    </div>
-                                                    <!-- End: Book_img -->
-                                                    <div
-                                                        style="
-                                                            margin-top: 15px;
-                                                            width: inherit;
-                                                        "
-                                                        class="ms-4"
-                                                    >
-                                                        <a
-                                                            href="#"
-                                                            style="
-                                                                color: rgb(
-                                                                    55,
-                                                                    58,
-                                                                    60
-                                                                );
-                                                                text-decoration: none;
-                                                            "
-                                                            ><h4>
-                                                                Harry Potter and
-                                                                the sorcerer's
-                                                                Stone&nbsp;
-                                                            </h4></a
-                                                        ><!-- Start: starRatings&Reviews -->
-                                                        <div
-                                                            class="d-flex align-items-xxl-center"
-                                                        >
-                                                            <i
-                                                                class="fas fa-star"
-                                                                style="
-                                                                    color: var(
-                                                                        --bs-yellow
-                                                                    );
-                                                                "
-                                                            ></i
-                                                            ><i
-                                                                class="fas fa-star"
-                                                                style="
-                                                                    color: var(
-                                                                        --bs-yellow
-                                                                    );
-                                                                "
-                                                            ></i
-                                                            ><i
-                                                                class="fas fa-star"
-                                                                style="
-                                                                    color: var(
-                                                                        --bs-yellow
-                                                                    );
-                                                                "
-                                                            ></i
-                                                            ><i
-                                                                class="far fa-star"
-                                                                style="
-                                                                    color: rgb(
-                                                                        174,
-                                                                        174,
-                                                                        174
-                                                                    );
-                                                                "
-                                                            ></i
-                                                            ><i
-                                                                class="far fa-star"
-                                                                style="
-                                                                    color: rgb(
-                                                                        174,
-                                                                        174,
-                                                                        174
-                                                                    );
-                                                                "
-                                                            ></i
-                                                            ><!-- Start: reviews -->
-                                                            <p
-                                                                style="
-                                                                    margin-bottom: -1px;
-                                                                    margin-top: 14px;
-                                                                    font-size: 18px;
-                                                                "
-                                                                class="my-2 ms-4 mb-0 mt-0"
-                                                            >
-                                                                &nbsp;<svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    width="1em"
-                                                                    height="1em"
-                                                                    viewBox="0 0 24 24"
-                                                                    stroke-width="2"
-                                                                    stroke="currentColor"
-                                                                    fill="none"
-                                                                    stroke-linecap="round"
-                                                                    stroke-linejoin="round"
-                                                                    class="icon icon-tabler icon-tabler-eye-star me-2"
-                                                                    style="
-                                                                        font-size: 20px;
-                                                                    "
-                                                                >
-                                                                    <path
-                                                                        stroke="none"
-                                                                        d="M0 0h24v24H0z"
-                                                                        fill="none"
-                                                                    ></path>
-                                                                    <path
-                                                                        d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
-                                                                    ></path>
-                                                                    <path
-                                                                        d="M9.608 17.682c-2.558 -.71 -4.76 -2.603 -6.608 -5.682c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
-                                                                    ></path>
-                                                                    <path
-                                                                        d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z"
-                                                                    ></path></svg
-                                                                >Reviews
-                                                                :&nbsp;<span
-                                                                    >123</span
-                                                                >
-                                                            </p>
-                                                            <!-- End: reviews -->
+                                        <div class="col-sm-6 col-md-6 col-lg-12 col-xl-12"  >
+                                            @forelse ($allBooks as $books)
+
+                                                <div class="card border-0" style="border-style: none" >
+                                                    <div class="card-body d-inline-flex justify-content-evenly" style="border-style: none; border-right-style: none;">
+                                                        <!-- Start: Book_img -->
+                                                        <div class="d-lg-flex d-xl-flex d-xxl-flex justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center justify-content-xxl-center"style=" width: 1000.8594px; " >
+                                                            <picture >
+                                                                <img class="img-fluid" src="/assets/img/Asset%201.png?h=5b3d64bc53126679d6091568004b9ab7" width="128" height="190" style=" border-radius: 20px; width: inherit;"/>
+                                                            </picture>
                                                         </div>
-                                                        <!-- End: starRatings&Reviews -->
-                                                        <p
-                                                            style="
-                                                                margin-bottom: -1px;
-                                                                margin-top: 14px;
-                                                            "
-                                                            class="my-2"
-                                                        >
-                                                            J.K. Rowling
-                                                        </p>
-                                                        <p
-                                                            style="
-                                                                max-height: 130px;
-                                                                overflow: auto;
-                                                            "
-                                                        >
-                                                            Lorem ipsum odor
-                                                            amet, consectetuer
-                                                            adipiscing elit.
-                                                            Massa arcu nunc
-                                                            justo egestas mus
-                                                            fames. Ut litora
-                                                            litora eget sed eget
-                                                            viverra cubilia
-                                                            finibus mollis.
-                                                            Penatibus nisl
-                                                            hendrerit parturient
-                                                            ultrices justo
-                                                            lectus vivamus
-                                                            dapibus. Semper nibh
-                                                            litora aenean
-                                                            sodales maecenas
-                                                            mattis consequat
-                                                            enim commodo. Eros
-                                                            habitasse donec orci
-                                                            fames luctus lacinia
-                                                            ultrices blandit.
-                                                            Sit accumsan
-                                                            himenaeos urna
-                                                            conubia morbi a,
-                                                            proin nulla. Tortor
-                                                            ad metus; curae
-                                                            fusce commodo dui
-                                                            imperdiet. Lacinia
-                                                            fusce magnis posuere
-                                                            hendrerit ultricies
-                                                            suspendisse.
-                                                        </p>
-                                                    </div>
-                                                    <div
-                                                        class="d-xl-flex d-xxl-flex justify-content-xl-center align-items-xl-center align-items-xxl-end ms-4"
-                                                    >
-                                                        <div
-                                                            class="table-responsive"
-                                                        >
-                                                            <table
-                                                                class="table table-borderless"
-                                                            >
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td
-                                                                            style="
-                                                                                width: 131.578px;
-                                                                            "
-                                                                        >
-                                                                            Genres
-                                                                        </td>
-                                                                        <td
-                                                                            style="
-                                                                                height: inherit;
-                                                                                width: inherit;
-                                                                            "
-                                                                        >
-                                                                            <a
-                                                                                href="#"
-                                                                                style="
-                                                                                    text-decoration: underline
-                                                                                        none;
-                                                                                    margin-right: 12px;
-                                                                                    color: rgb(
-                                                                                        0,
-                                                                                        0,
-                                                                                        0
-                                                                                    );
-                                                                                "
-                                                                                >Magic</a
-                                                                            ><a
-                                                                                href="#"
-                                                                                style="
-                                                                                    text-decoration: underline
-                                                                                        none;
-                                                                                    margin-right: 12px;
-                                                                                    color: rgb(
-                                                                                        0,
-                                                                                        0,
-                                                                                        0
-                                                                                    );
-                                                                                "
-                                                                                >Adventure</a
-                                                                            ><a
-                                                                                href="#"
-                                                                                style="
-                                                                                    text-decoration: underline
-                                                                                        none;
-                                                                                    margin-right: 12px;
-                                                                                    color: rgb(
-                                                                                        0,
-                                                                                        0,
-                                                                                        0
-                                                                                    );
-                                                                                "
-                                                                                >Young
-                                                                                Adult</a
-                                                                            ><a
-                                                                                href="#"
-                                                                                style="
-                                                                                    text-decoration: underline
-                                                                                        none;
-                                                                                    margin-right: 12px;
-                                                                                    color: rgb(
-                                                                                        0,
-                                                                                        0,
-                                                                                        0
-                                                                                    );
-                                                                                "
-                                                                                >Fantasy</a
-                                                                            ><a
-                                                                                href="#"
-                                                                                style="
-                                                                                    text-decoration: underline
-                                                                                        none;
-                                                                                    margin-right: 12px;
-                                                                                    color: rgb(
-                                                                                        0,
-                                                                                        0,
-                                                                                        0
-                                                                                    );
-                                                                                "
-                                                                                >Children</a
-                                                                            >
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            Published
-                                                                        </td>
-                                                                        <td>
-                                                                            June
-                                                                            26,
-                                                                            1997
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            Format
-                                                                        </td>
-                                                                        <td>
-                                                                            333
-                                                                            pages
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            Language
-                                                                        </td>
-                                                                        <td>
-                                                                            English
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                        <!-- End: Book_img -->
+                                                        <div style=" margin-top: 15px; width: inherit; "class="ms-4" >
+                                                            <a href="#" style="color: rgb( 55, 58, 60 ); text-decoration: none;">
+                                                                <h4>
+                                                                {{ $books->title }}
+                                                                </h4>
+                                                            </a>
+                                                            <!-- Start: starRatings&Reviews -->
+                                                            <div class="d-flex align-items-xxl-center" >
+                                                                <i class="fas fa-star"style="color: var( --bs-yellow); "></i >
+                                                                <i class="fas fa-star"style="color: var( --bs-yellow); "></i >
+                                                                <i class="fas fa-star"style="color: var( --bs-yellow); "></i >
+                                                                <i class="fas fa-star"style="color: var( --bs-yellow); "></i >
+                                                                <i class="fas fa-star"style="color: var( --bs-yellow); "></i >
+                                                                
+                                                                <!-- Start: reviews -->
+                                                                <p style=" margin-bottom: -1px; margin-top: 14px;font-size: 18px; " class="my-2 ms-4 mb-0 mt-0" >
+                                                                    &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-eye-star me-2"style=" font-size: 20px; " >
+                                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" ></path>
+                                                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                                                        <path d="M9.608 17.682c-2.558 -.71 -4.76 -2.603 -6.608 -5.682c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path>
+                                                                        <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z"></path>
+                                                                    </svg >Reviews:&nbsp;<span >123</span >
+                                                                </p>
+                                                                <!-- End: reviews -->
+                                                            </div>
+                                                            <!-- End: starRatings&Reviews -->
+                                                            <p style=" margin-bottom: -1px; margin-top: 14px;"class="my-2" >
+                                                            {{ $books->author }}
+                                                            </p>
+                                                            <p style=" max-height: 130px; overflow: auto; " >
+                                                            {{ $books->about }}
+                                                            </p>
+                                                        </div>
+                                                        <divclass="d-xl-flex d-xxl-flex justify-content-xl-center align-items-xl-center align-items-xxl-end ms-4">
+                                                            <div  class="table-responsive" >
+                                                                <table class="table table-borderless">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td
+                                                                                style=" width: 131.578px; " >
+                                                                                Genres
+                                                                            </td>
+                                                                            <td
+                                                                                style=" height: inherit; width: inherit;"  >
+                                                                                <a href="#" style=" text-decoration: underline none; margin-right: 12px; color: rgb(  0, 0, 0);" >
+                                                                                {{ $books->genres }}
+                                                                                </a >    
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Published
+                                                                            </td>
+                                                                            <td>
+                                                                            {{ $books->published }}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Format
+                                                                            </td>
+                                                                            <td>
+                                                                            {{ $books->format }}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Language
+                                                                            </td>
+                                                                            <td>
+                                                                            {{ $books->language }}
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            @empty
+                                                <p>No books found.</p>
+                                            @endforelse
                                         </div>
                                         <!-- End: BookCards -->
                                     </div>

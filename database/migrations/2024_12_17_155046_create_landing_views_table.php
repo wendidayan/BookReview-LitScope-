@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('author');
+            $table->integer('rating');
             $table->string('genres');
             $table->date('published');
             $table->string('format');
             $table->string('language');
             $table->text('about');
+            $table->text('review');
             $table->text('about_author');
             $table->string('approval_status')->default('pending');
             $table->timestamps();

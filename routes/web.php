@@ -13,11 +13,45 @@ use App\Models\UserLogin;
 
 
 Route::get('/login-page', [UserController::class, 'index'])->name('login-page');
-Route::post('/login-page', [UserController::class, 'login'])->name('login.submit');
+//Route::post('/login-page', [UserController::class, 'login'])->name('login.submit');
+//Route::post('/signup', [UserController::class, 'register'])->name('signup.submit');
+
+// Display the login form (GET request)
+Route::get('/', [UserController::class, 'showLoginForm'])->name('login');
+
+// Handle the login form submission (POST request)
+Route::post('/login', [UserController::class, 'logrequest'])->name('login.submit'); 
+
+// Handle signup
 Route::post('/signup', [UserController::class, 'register'])->name('signup.submit');
 
+// Landing page (after successful login)
+Route::get('/landing', [LandingViewController::class, 'index'])->name('landing');
 
-Route::get('/', [HomeController::class, 'index'])->middleware(CheckAge::class)->name('home'); // Home page route
+Route::get('/UserProfile', [LandingViewController::class, 'showUserProfile'])->name('myprofile');
+
+
+Route::get('/allbooks', [LandingViewController::class, 'showAll'])->name('books.showAll');
+
+Route::get('/AdminDashboard', [UserController::class, 'showDashboard'])->name('AdminDashboard');
+
+// Route to show the form for adding a new book (GET request)
+Route::get('/AdminAddBook', [LandingViewController::class, 'create'])->name('book.create');
+
+// Route to handle storing the new book (POST request)
+Route::post('/AdminAddBook', [LandingViewController::class, 'store'])->name('book.store');
+
+Route::get('/AdminRemoveBook', [LandingViewController::class, 'viewBooks']);
+Route::delete('/AdminRemoveBook/{id}', [LandingViewController::class, 'deleteBook'])->name('admin.removeBook');
+
+Route::get('/AdminAproveBook', [LandingViewController::class, 'viewPendingBooks'])->name('admin.pendingBooks');
+
+Route::post('/AdminAproveBook/approve-book/{id}', [LandingViewController::class, 'approveBook'])->name('admin.approveBook');
+Route::post('/AdminAproveBook/reject-book/{id}', [LandingViewController::class, 'rejectBook'])->name('admin.rejectBook');
+
+
+
+//Route::get('/', [HomeController::class, 'index'])->middleware(CheckAge::class)->name('home'); // Home page route
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index'); // Dashboard main page
@@ -33,7 +67,7 @@ Route::get('/access-denied', function () {
 
 //Route::resource('landings', LandingPageController::class);
 
-Route::get('/', [LandingViewController::class, 'index'])->name('landingView.index');
+Route::get('/homepage', [LandingViewController::class, 'index'])->name('landingView.index');
 // Route to show details of a specific book by ID
 
 // Define the routes here
@@ -67,46 +101,21 @@ Route::get('/AdminBooks', function () {
 });
 
 Route::get('/AdminUsers',[UserController::class, 'showUsers'])->name('users.index');
+Route::get('/AdminBooks',[UserController::class, 'showBooks'])->name('books.index');
 
-// Route to show the form for adding a new book (GET request)
-//Route::get('/AdminAddBook', [LandingViewController::class, 'create'])->name('book.create');
-
-// Route to handle storing the new book (POST request)
-//Route::post('/AdminAddBook', [LandingViewController::class, 'store'])->name('book.store');
-
-// Route to show the form for adding a new book
-Route::get('/AdminAddBook', [LandingViewController::class, 'create'])->name('book.create');
-
-// Route to handle storing the new book
-Route::post('/AdminAddBook', [LandingViewController::class, 'store'])->name('book.store');
-
-// Route to show books pending approval
-//Route::get('/AdminAproveBook', [LandingViewController::class, 'showPendingBooks']);
-
-//Route::post('/AdminAproveBook/approve/{id}', [LandingViewController::class, 'approveBook'])->name('approveBook');
-//Route::post('/AdminAproveBook/reject/{id}', [LandingViewController::class, 'rejectBook'])->name('rejectBook');
-
-// Route to show pending books for approval
-//Route::get('/AdminAproveBook/pending-books', [LandingViewController::class, 'showPendingBooksForApproval'])->name('admin.pendingBooks');
-
-// Route to approve a book
-//Route::post('/AdminAproveBook/approve-book/{id}', [LandingViewController::class, 'approvePendingBook'])->name('admin.approveBook');
-
-// Route to reject a book
-//Route::post('/AdminAproveBook/reject-book/{id}', [LandingViewController::class, 'rejectPendingBook'])->name('admin.rejectBook');
+//Route::get('/AdminAddBook', function () {
+    //return view('AdminAddBook');
+//});
 
 
-
-Route::get('/AdminRemoveBook', [LandingViewController::class, 'viewBooks']);
-Route::delete('/AdminRemoveBook/{id}', [LandingViewController::class, 'deleteBook'])->name('admin.removeBook');
-
-
-Route::get('/AdminAproveBook', [LandingViewController::class, 'viewPendingBooks'])->name('admin.pendingBooks');
-
-Route::post('/AdminAproveBook/approve-book/{id}', [LandingViewController::class, 'approveBook'])->name('admin.approveBook');
-Route::post('/AdminAproveBook/reject-book/{id}', [LandingViewController::class, 'rejectBook'])->name('admin.rejectBook');
+Route::get('/WelcomePage', function () {
+    return view('WelcomePage');
+});
 
 
+//Route::get('/AdminRemoveBook', function () {
+    //return view('AdminRemoveBook');
+//});
 
 
 

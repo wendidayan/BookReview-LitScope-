@@ -218,66 +218,35 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a
-                                class="dropdown-toggle nav-link"
-                                aria-expanded="false"
-                                data-bs-toggle="dropdown"
-                                href="#"
-                                style="
-                                    text-decoration: none;
-                                    color: rgba(0, 0, 0, 0.65);
-                                    text-decoration: none;
-                                "
-                                >Vendor</a
-                            >
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                                href="#"style="text-decoration: none; color: rgba(0, 0, 0, 0.65); text-decoration: none;">
+                                Vendor
+                            </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">First Item</a
-                                ><a class="dropdown-item" href="#"
-                                    >Second Item</a
-                                ><a class="dropdown-item" href="#"
-                                    >Third Item</a
-                                >
+                                <a class="dropdown-item" href="{{ route('landingView.index') }}">Homepage</a>
+                                <!--<a class="dropdown-item" href="#">Second Item</a>
+                                <a class="dropdown-item" href="#">Third Item</a>-->
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a
-                                class="dropdown-toggle nav-link"
-                                aria-expanded="false"
-                                data-bs-toggle="dropdown"
-                                href="#"
-                                style="
-                                    text-decoration: none;
-                                    color: rgba(0, 0, 0, 0.65);
-                                    text-decoration: none;
-                                "
-                                >Pages</a
-                            >
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                                href="#" style=" text-decoration: none; color: rgba(0, 0, 0, 0.65); text-decoration: none;">
+                                Pages
+                            </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">First Item</a
-                                ><a class="dropdown-item" href="#"
-                                    >Second Item</a
-                                ><a class="dropdown-item" href="#"
-                                    >Third Item</a
-                                >
+                                <a class="dropdown-item" href="{{ route('books.showAll') }}">Library</a>
+                                <!--<a class="dropdown-item" href="#">Second Item</a>
+                                <a class="dropdown-item" href="#">Third Item</a>-->
                             </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
                         </li>
-                        <li
-                            class="nav-item"
-                            style="border-top: 1px solid #858585a6"
-                        >
-                            <a
-                                class="nav-link"
-                                href="#"
-                                style="
-                                    border-top-style: solid;
-                                    border-top-color: rgba(179, 179, 179, 0.65);
-                                "
-                                >Account</a
-                            >
-                        </li>
+                        <!--<li class="nav-item" style="border-top: 1px solid #858585a6">
+                            <a class="nav-link" href="#" style=" border-top-style: solid; border-top-color: rgba(179, 179, 179, 0.65); "
+                                >Account
+                            </a>
+                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -520,7 +489,7 @@
                     <ul class="navbar-nav me-auto"></ul>
                     <a
                         class="d-md-flex d-lg-flex d-xxl-flex justify-content-md-center justify-content-lg-center align-items-xxl-center"
-                        href="#"
+                        href="{{ route('myprofile') }}"
                         style="
                             text-decoration: none;
                             border-style: none;
@@ -528,7 +497,7 @@
                             color: rgba(0, 0, 0, 0.65);
                             margin-left: 24px;
                         "
-                        >Account<svg
+                        >{{ $currentUser->username }}<svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="1em"
                             height="1em"
@@ -553,55 +522,35 @@
                 <div class="collapse navbar-collapse" id="navcol-5">
                     <ul class="navbar-nav navbar-nav-scroll mx-auto">
                         <li class="nav-item dropdown">
-                            <a
-                                class="dropdown-toggle nav-link"
-                                aria-expanded="false"
-                                data-bs-toggle="dropdown"
-                                href="#"
-                                style="
-                                    text-decoration: none;
-                                    color: rgba(0, 0, 0, 0.65);
-                                    text-decoration: none;
-                                "
-                                >Vendor</a
-                            >
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                                href="#"style="text-decoration: none; color: rgba(0, 0, 0, 0.65); text-decoration: none;">
+                                Vendor
+                            </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">First Item</a
-                                ><a class="dropdown-item" href="#"
-                                    >Second Item</a
-                                ><a class="dropdown-item" href="#"
-                                    >Third Item</a
-                                >
+                                <a class="dropdown-item" href="{{ route('landingView.index') }}">Homepage</a>
+                                <!--<a class="dropdown-item" href="#">Second Item</a>
+                                <a class="dropdown-item" href="#">Third Item</a>-->
                             </div>
                         </li>
-                        <li
-                            class="nav-item dropdown"
-                            style="margin-left: 30px; margin-right: 30px"
-                        >
-                            <a
-                                class="dropdown-toggle nav-link"
-                                aria-expanded="false"
-                                data-bs-toggle="dropdown"
-                                href="#"
-                                style="
-                                    text-decoration: none;
-                                    color: rgba(0, 0, 0, 0.65);
-                                    text-decoration: none;
-                                "
-                                >Pages</a
-                            >
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"
+                                href="#" style=" text-decoration: none; color: rgba(0, 0, 0, 0.65); text-decoration: none;">
+                                Pages
+                            </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">First Item</a
-                                ><a class="dropdown-item" href="#"
-                                    >Second Item</a
-                                ><a class="dropdown-item" href="#"
-                                    >Third Item</a
-                                >
+                                <a class="dropdown-item" href="{{ route('books.showAll') }}">Library</a>
+                                <!--<a class="dropdown-item" href="#">Second Item</a>
+                                <a class="dropdown-item" href="#">Third Item</a>-->
                             </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
                         </li>
+                        <!--<li class="nav-item" style="border-top: 1px solid #858585a6">
+                            <a class="nav-link" href="{{ route('myprofile') }}" style=" border-top-style: solid; border-top-color: rgba(179, 179, 179, 0.65); "
+                                >{{ $currentUser->username }}
+                            </a>
+                        </li-->
                     </ul>
                 </div>
             </div>
@@ -1928,723 +1877,36 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div
-                            class="row"
-                            style="border-top: 1px solid rgb(174, 174, 174)"
-                        >
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                <div
-                                    class="card border-0"
-                                    style="border-style: none"
-                                >
-                                    <div
-                                        class="card-body justify-content-evenly"
-                                        style="
-                                            border-style: none;
-                                            border-right-style: none;
-                                        "
-                                    >
-                                        <div
-                                            class="d-xxl-flex justify-content-xxl-center"
-                                            style="width: inherit"
-                                        >
-                                            <picture
-                                                ><img
-                                                    class="img-fluid"
-                                                    src="/assets/img/Asset%207.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                    width="274"
-                                                    height="408"
-                                                    style="border-radius: 20px"
-                                            /></picture>
-                                        </div>
-                                        <div style="margin-top: 15px">
-                                            <a
-                                                href="{{ url('/BookView') }}"
-                                                style="
-                                                    color: rgb(55, 58, 60);
-                                                    text-decoration: none;
-                                                "
-                                                ><h4>
-                                                    Harry Potter and the
-                                                    sorcerer's Stone&nbsp;
-                                                </h4></a
-                                            >
-                                            <div class="d-flex">
-                                                <i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i>
+                        <div class="row" style="border-top: 1px solid rgb(174, 174, 174)">
+                            <!-- Card Holder for book -->
+                            @foreach ($popularBooks as $book)
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                                    <div class="card border-0" style="border-style: none">
+                                        <div class="card-body justify-content-evenly" style="border-style: none; border-right-style: none;">
+                                            <div class="d-xxl-flex justify-content-xxl-center" style="width: inherit" >
+                                                <img 
+                                                    src="{{ $book->image_url }}" 
+                                                    alt="{{ $book->title }}" 
+                                                    class="img-fluid" 
+                                                    style="border-radius: 20px; width: 100%; height: auto;"
+                                                />
                                             </div>
-                                            <p
-                                                style="
-                                                    margin-bottom: -1px;
-                                                    margin-top: 14px;
-                                                "
-                                            >
-                                                J.K. Rowling
-                                            </p>
+                                            <div style="margin-top: 15px">
+                                                <a href="{{ url('/book/' . $book->id) }}" style=" color: rgb(55, 58, 60); text-decoration: none; ">
+                                                    <h4>{{ $book->title }}</h4>
+                                                </a>
+                                                <div class="d-flex">
+                                                    <i class="fas fa-star"style="color: var(--bs-yellow);"></i>
+                                                    <i class="fas fa-star"style="color: var(--bs-yellow);"></i>
+                                                    <i class="far fa-star" style="color: rgb(174, 174, 174);"></i>
+                                                    <i class="far fa-star" style="color: rgb(174, 174, 174);"></i>
+                                                </div>
+                                                <p style=" margin-bottom: -1px; margin-top: 14px;">{{ $book->author }}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                <div
-                                    class="card border-0"
-                                    style="border-style: none"
-                                >
-                                    <div
-                                        class="card-body justify-content-evenly"
-                                        style="
-                                            border-style: none;
-                                            border-right-style: none;
-                                        "
-                                    >
-                                        <div
-                                            class="d-xxl-flex justify-content-xxl-center"
-                                            style="width: inherit"
-                                        >
-                                            <picture
-                                                ><img
-                                                    class="img-fluid"
-                                                    src="/assets/img/Asset%202.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                    width="274"
-                                                    height="408"
-                                                    style="border-radius: 20px"
-                                            /></picture>
-                                        </div>
-                                        <div style="margin-top: 15px">
-                                            <a
-                                                href="{{ url('/BookView') }}"
-                                        
-                                                style="
-                                                    color: rgb(55, 58, 60);
-                                                    text-decoration: none;
-                                                "
-                                                ><h4>
-                                                    Harry Potter and the
-                                                    sorcerer's Stone&nbsp;
-                                                </h4></a
-                                            >
-                                            <div class="d-flex">
-                                                <i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i>
-                                            </div>
-                                            <p
-                                                style="
-                                                    margin-bottom: -1px;
-                                                    margin-top: 14px;
-                                                "
-                                            >
-                                                J.K. Rowling
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                <div
-                                    class="card border-0"
-                                    style="border-style: none"
-                                >
-                                    <div
-                                        class="card-body justify-content-evenly"
-                                        style="
-                                            border-style: none;
-                                            border-right-style: none;
-                                        "
-                                    >
-                                        <div
-                                            class="d-xxl-flex justify-content-xxl-center"
-                                            style="width: inherit"
-                                        >
-                                            <picture
-                                                ><img
-                                                    class="img-fluid"
-                                                    src="/assets/img/Asset%203.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                    width="274"
-                                                    height="408"
-                                                    style="border-radius: 20px"
-                                            /></picture>
-                                        </div>
-                                        <div style="margin-top: 15px">
-                                            <a
-                                                href="{{ url('/BookView') }}"
-                                                style="
-                                                    color: rgb(55, 58, 60);
-                                                    text-decoration: none;
-                                                "
-                                                ><h4>
-                                                    Harry Potter and the
-                                                    sorcerer's Stone&nbsp;
-                                                </h4></a
-                                            >
-                                            <div class="d-flex">
-                                                <i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i>
-                                            </div>
-                                            <p
-                                                style="
-                                                    margin-bottom: -1px;
-                                                    margin-top: 14px;
-                                                "
-                                            >
-                                                J.K. Rowling
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                <div
-                                    class="card border-0"
-                                    style="border-style: none"
-                                >
-                                    <div
-                                        class="card-body justify-content-evenly"
-                                        style="
-                                            border-style: none;
-                                            border-right-style: none;
-                                        "
-                                    >
-                                        <div
-                                            class="d-xxl-flex justify-content-xxl-center"
-                                            style="width: inherit"
-                                        >
-                                            <picture
-                                                ><img
-                                                    class="img-fluid"
-                                                    src="/assets/img/Asset%204.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                    width="274"
-                                                    height="408"
-                                                    style="border-radius: 20px"
-                                            /></picture>
-                                        </div>
-                                        <div style="margin-top: 15px">
-                                            <a
-                                                href="{{ url('/BookView') }}"
-                                                style="
-                                                    color: rgb(55, 58, 60);
-                                                    text-decoration: none;
-                                                "
-                                                ><h4>
-                                                    Harry Potter and the
-                                                    sorcerer's Stone&nbsp;
-                                                </h4></a
-                                            >
-                                            <div class="d-flex">
-                                                <i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i>
-                                            </div>
-                                            <p
-                                                style="
-                                                    margin-bottom: -1px;
-                                                    margin-top: 14px;
-                                                "
-                                            >
-                                                J.K. Rowling
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                <div
-                                    class="card border-0"
-                                    style="border-style: none"
-                                >
-                                    <div
-                                        class="card-body justify-content-evenly"
-                                        style="
-                                            border-style: none;
-                                            border-right-style: none;
-                                        "
-                                    >
-                                        <div
-                                            class="d-xxl-flex justify-content-xxl-center"
-                                            style="width: inherit"
-                                        >
-                                            <picture
-                                                ><img
-                                                    class="img-fluid"
-                                                    src="/assets/img/Asset%205.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                    width="274"
-                                                    height="408"
-                                                    style="border-radius: 20px"
-                                            /></picture>
-                                        </div>
-                                        <div style="margin-top: 15px">
-                                            <a
-                                                href="{{ url('/BookView') }}"
-                                                style="
-                                                    color: rgb(55, 58, 60);
-                                                    text-decoration: none;
-                                                "
-                                                ><h4>
-                                                    Harry Potter and the
-                                                    sorcerer's Stone&nbsp;
-                                                </h4></a
-                                            >
-                                            <div class="d-flex">
-                                                <i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i>
-                                            </div>
-                                            <p
-                                                style="
-                                                    margin-bottom: -1px;
-                                                    margin-top: 14px;
-                                                "
-                                            >
-                                                J.K. Rowling
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                <div
-                                    class="card border-0"
-                                    style="border-style: none"
-                                >
-                                    <div
-                                        class="card-body justify-content-evenly"
-                                        style="
-                                            border-style: none;
-                                            border-right-style: none;
-                                        "
-                                    >
-                                        <div
-                                            class="d-xxl-flex justify-content-xxl-center"
-                                            style="width: inherit"
-                                        >
-                                            <picture
-                                                ><img
-                                                    class="img-fluid"
-                                                    src="/assets/img/Asset%206.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                    width="274"
-                                                    height="408"
-                                                    style="border-radius: 20px"
-                                            /></picture>
-                                        </div>
-                                        <div style="margin-top: 15px">
-                                            <a
-                                                href="{{ url('/BookView') }}"
-                                                style="
-                                                    color: rgb(55, 58, 60);
-                                                    text-decoration: none;
-                                                "
-                                                ><h4>
-                                                    Harry Potter and the
-                                                    sorcerer's Stone&nbsp;
-                                                </h4></a
-                                            >
-                                            <div class="d-flex">
-                                                <i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i>
-                                            </div>
-                                            <p
-                                                style="
-                                                    margin-bottom: -1px;
-                                                    margin-top: 14px;
-                                                "
-                                            >
-                                                J.K. Rowling
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                <div
-                                    class="card border-0"
-                                    style="border-style: none"
-                                >
-                                    <div
-                                        class="card-body justify-content-evenly"
-                                        style="
-                                            border-style: none;
-                                            border-right-style: none;
-                                        "
-                                    >
-                                        <div
-                                            class="d-xxl-flex justify-content-xxl-center"
-                                            style="width: inherit"
-                                        >
-                                            <picture
-                                                ><img
-                                                    class="img-fluid"
-                                                    src="/assets/img/Asset%207.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                    width="274"
-                                                    height="408"
-                                                    style="border-radius: 20px"
-                                            /></picture>
-                                        </div>
-                                        <div style="margin-top: 15px">
-                                            <a
-                                                href="{{ url('/BookView') }}"
-                                                style="
-                                                    color: rgb(55, 58, 60);
-                                                    text-decoration: none;
-                                                "
-                                                ><h4>
-                                                    Harry Potter and the
-                                                    sorcerer's Stone&nbsp;
-                                                </h4></a
-                                            >
-                                            <div class="d-flex">
-                                                <i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i>
-                                            </div>
-                                            <p
-                                                style="
-                                                    margin-bottom: -1px;
-                                                    margin-top: 14px;
-                                                "
-                                            >
-                                                J.K. Rowling
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                <div
-                                    class="card border-0"
-                                    style="border-style: none"
-                                >
-                                    <div
-                                        class="card-body justify-content-evenly"
-                                        style="
-                                            border-style: none;
-                                            border-right-style: none;
-                                        "
-                                    >
-                                        <div
-                                            class="d-xxl-flex justify-content-xxl-center"
-                                            style="width: inherit"
-                                        >
-                                            <picture
-                                                ><img
-                                                    class="img-fluid"
-                                                    src="/assets/img/Asset%208.png?h=8d80ed05cc3ab818e618bea283500078"
-                                                    width="274"
-                                                    height="408"
-                                                    style="border-radius: 20px"
-                                            /></picture>
-                                        </div>
-                                        <div style="margin-top: 15px">
-                                            <a
-                                                href="{{ url('/BookView') }}"
-                                                style="
-                                                    color: rgb(55, 58, 60);
-                                                    text-decoration: none;
-                                                "
-                                                ><h4>
-                                                    Harry Potter and the
-                                                    sorcerer's Stone&nbsp;
-                                                </h4></a
-                                            >
-                                            <div class="d-flex">
-                                                <i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="fas fa-star"
-                                                    style="
-                                                        color: var(--bs-yellow);
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i
-                                                ><i
-                                                    class="far fa-star"
-                                                    style="
-                                                        color: rgb(
-                                                            174,
-                                                            174,
-                                                            174
-                                                        );
-                                                    "
-                                                ></i>
-                                            </div>
-                                            <p
-                                                style="
-                                                    margin-bottom: -1px;
-                                                    margin-top: 14px;
-                                                "
-                                            >
-                                                J.K. Rowling
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -2735,8 +1997,7 @@
                             >
                         </div>
                         <p class="text-muted copyright">
-                            Sem eleifend donec molestie, integer quisque orci
-                            aliquam.
+                            The Bookish Corner for Every Avid Reader.
                         </p>
                     </div>
                     <!-- End: Social Icons -->

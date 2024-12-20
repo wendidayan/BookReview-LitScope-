@@ -400,32 +400,10 @@
                                                     d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z"
                                                     fill="currentColor"
                                                 ></path>
-                                            </svg></button
-                                        ><button
-                                            class="btn btn-primary me-3"
-                                            type="button"
-                                            style="
-                                                background: transparent;
-                                                border-style: none;
-                                                color: #4da454;
-                                            "
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="1em"
-                                                height="1em"
-                                                viewBox="0 0 24 24"
-                                                stroke-width="2"
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="icon icon-tabler icon-tabler-bell"
-                                                style="
-                                                    color: #4da454;
-                                                    font-size: 25px;
-                                                "
-                                            >
+                                            </svg>
+                                        </button >
+                                        <button class="btn btn-primary me-3" type="button" style=" background: transparent; border-style: none; color: #4da454; " >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-bell" style=" color: #4da454; font-size: 25px; "  >
                                                 <path
                                                     stroke="none"
                                                     d="M0 0h24v24H0z"
@@ -437,38 +415,17 @@
                                                 <path
                                                     d="M9 17v1a3 3 0 0 0 6 0v-1"
                                                 ></path>
-                                            </svg></button
-                                        ><a
-                                            class="d-md-flex d-lg-flex d-xxl-flex justify-content-md-center justify-content-lg-center align-items-xxl-center ms-3"
-                                            href="#"
-                                            style="
-                                                text-decoration: none;
-                                                border-style: none;
-                                                border-color: rgba(
-                                                    0,
-                                                    0,
-                                                    0,
-                                                    0.65
-                                                );
-                                                color: rgba(0, 0, 0, 0.65);
-                                                margin-left: 24px;
-                                            "
-                                            >Account<svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="1em"
-                                                height="1em"
-                                                fill="currentColor"
-                                                viewBox="0 0 16 16"
-                                                class="bi bi-person"
-                                                style="
-                                                    margin-left: 9px;
-                                                    font-size: 29px;
-                                                "
-                                            >
+                                            </svg>
+                                        </button>
+                                        <a class="d-md-flex d-lg-flex d-xxl-flex justify-content-md-center justify-content-lg-center align-items-xxl-center ms-3" href="#" style=" text-decoration: none; border-style: none; border-color: rgba( 0, 0, 0, 0.65 ); color: rgba(0, 0, 0, 0.65); margin-left: 24px; "
+                                            >{{ $currentUser->username }}  
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person"
+                                                style=" margin-left: 9px; font-size: 29px; " >
                                                 <path
-                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
-                                                ></path></svg
-                                        ></a>
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z" >
+                                                </path>
+                                            </svg >
+                                        </a>
                                     </div>
                                 </div>
                             </nav>  
@@ -479,7 +436,7 @@
                         <div class="col-lg-6 col-xl-6 col-xxl-7 ps-3">
                             <h5 class="display-6" style="font-size: 25px">
                                 <strong>Welcome back,&nbsp;</strong
-                                ><span><strong>User</strong></span>
+                                ><span><strong style="font-style: italic;"> {{ $currentUser->username }}! </strong></span>
                             </h5>
                             <h6>Let's dive in and get things done.</h6>
                         </div>
@@ -826,7 +783,7 @@
                                                             fill-rule="evenodd"
                                                             d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
                                                         ></path></svg
-                                                    >   {{ $booksRatedPercentage }}%
+                                                    >   {{ $formattedReviewPercentage }}%
                                                 </p>
                                             </div>
                                         </div>
@@ -937,7 +894,7 @@
                                                             fill-rule="evenodd"
                                                             d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
                                                         ></path></svg
-                                                    > {{ number_format($pendingBooksPercentage, 2) }}%
+                                                    >{{ number_format($pendingBooksPercentage, 2) }}%
                                                 </p>
                                             </div>
                                         </div>
@@ -1032,59 +989,59 @@
         <script src="/assets/js/script.min.js?h=481321c584e0b56c514c76979ded9b19"></script>
         <script src="/assets/js/fullscreen.js" defer></script>
         <script>
-    var ctx = document.getElementById('userChart').getContext('2d');
-    var userChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: @json($labels), // Dynamic month labels
-            datasets: [{
-                label: 'Number of Users',
-                backgroundColor: '#4da454',
-                borderColor: '#ffffff',
-                data: @json($data), // Dynamic data for user counts
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            legend: {
-                display: false,
-                labels: {
-                    fontStyle: 'normal'
-                }
-            },
-            title: {
-                fontStyle: 'normal',
-                display: false
-            },
-            scales: {
-                x: {
-                    grid: {
-                        drawTicks: true,
-                        borderDash: [0],
-                        zeroLineBorderDash: [0],
-                        drawOnChartArea: true
-                    },
-                    ticks: {
-                        fontStyle: 'normal',
-                        beginAtZero: false
-                    }
+            var ctx = document.getElementById('userChart').getContext('2d');
+            var userChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: @json($labels), // Dynamic month labels
+                    datasets: [{
+                        label: 'Number of Users',
+                        backgroundColor: '#4da454',
+                        borderColor: '#ffffff',
+                        data: @json($data), // Dynamic data for user counts
+                    }]
                 },
-                y: {
-                    grid: {
-                        drawTicks: true,
-                        borderDash: [0],
-                        zeroLineBorderDash: [0],
-                        drawOnChartArea: true
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false,
+                        labels: {
+                            fontStyle: 'normal'
+                        }
                     },
-                    ticks: {
+                    title: {
                         fontStyle: 'normal',
-                        beginAtZero: false
+                        display: false
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                drawTicks: true,
+                                borderDash: [0],
+                                zeroLineBorderDash: [0],
+                                drawOnChartArea: true
+                            },
+                            ticks: {
+                                fontStyle: 'normal',
+                                beginAtZero: false
+                            }
+                        },
+                        y: {
+                            grid: {
+                                drawTicks: true,
+                                borderDash: [0],
+                                zeroLineBorderDash: [0],
+                                drawOnChartArea: true
+                            },
+                            ticks: {
+                                fontStyle: 'normal',
+                                beginAtZero: false
+                            }
+                        }
                     }
                 }
-            }
-        }
-    });
-</script>
+            });
+        </script>
 
 
     </body>
