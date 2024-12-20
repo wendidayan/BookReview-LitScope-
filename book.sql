@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2024 at 11:39 AM
+-- Generation Time: Dec 20, 2024 at 06:37 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -84,6 +84,18 @@ CREATE TABLE `comments` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `book_id`, `user_id`, `parent_id`, `comment`, `rating`, `created_at`, `updated_at`) VALUES
+(4, 16, 3, NULL, 'this was genuinely so magical and special. I felt like a kid again reading this.', 5, '2024-12-20 09:29:03', '2024-12-20 09:29:03'),
+(5, 16, 3, 4, 'yes it was!!!', NULL, '2024-12-20 09:29:18', '2024-12-20 09:29:18'),
+(6, 16, 2, NULL, 'Not gonna lie, I had to push myself to get through this.\r\n\r\nI just didn’t find it enjoyable in the slightest, which makes me feel like a loser since it’s such a beloved children’s classic.', 3, '2024-12-20 09:31:11', '2024-12-20 09:31:11'),
+(7, 16, 4, 6, 'Agreeee!!!', NULL, '2024-12-20 09:32:28', '2024-12-20 09:32:28'),
+(8, 16, 4, NULL, 'Merry Christmas Sirrr!!!', 5, '2024-12-20 09:32:53', '2024-12-20 09:32:53'),
+(9, 16, 4, 8, 'We did it!!!', NULL, '2024-12-20 09:33:10', '2024-12-20 09:33:10');
+
 -- --------------------------------------------------------
 
 --
@@ -160,13 +172,11 @@ CREATE TABLE `landing_views` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `title` varchar(191) NOT NULL,
   `author` varchar(191) NOT NULL,
-  `rating` int(11) NOT NULL,
   `genres` varchar(191) NOT NULL,
   `published` date NOT NULL,
   `format` varchar(191) NOT NULL,
   `language` varchar(191) NOT NULL,
   `about` text NOT NULL,
-  `review` text NOT NULL,
   `about_author` text NOT NULL,
   `approval_status` varchar(191) NOT NULL DEFAULT 'pending',
   `created_at` timestamp NULL DEFAULT NULL,
@@ -177,10 +187,16 @@ CREATE TABLE `landing_views` (
 -- Dumping data for table `landing_views`
 --
 
-INSERT INTO `landing_views` (`id`, `title`, `author`, `rating`, `genres`, `published`, `format`, `language`, `about`, `review`, `about_author`, `approval_status`, `created_at`, `updated_at`) VALUES
-(1, 'Harry Potter and the Sorcerer\'s Stone', 'J.K. Rowling', 4, 'Magic, Adventure, Young Adult, Fantasy, Children', '1997-06-26', '333 pages', 'English', 'The story of a young wizard, Harry Potter, and his journey to discover his magical heritage.', 'An enthralling tale of magic, friendship, and courage that captivates readers of all ages.', 'J.K. Rowling is a British author best known for writing the Harry Potter series.', 'pending', '2024-12-20 02:27:03', '2024-12-20 02:27:03'),
-(2, 'The Great Gatsby', 'F. Scott Fitzgerald', 5, 'Classic, Fiction, Drama', '1925-04-10', '180 pages', 'English', 'A story about the American dream, love, and tragedy set in the 1920s.', 'An iconic novel that explores themes of ambition, love, and the decay of American society.', 'F. Scott Fitzgerald was an American novelist and short story writer, best known for his novel The Great Gatsby.', 'pending', '2024-12-20 02:27:03', '2024-12-20 02:27:03'),
-(3, 'The Great Gatsby', 'F. Scott Fitzgerald', 5, 'Classic, Fiction, Drama', '1925-04-10', '180 pages', 'English', 'A story about the American dream, love, and tragedy set in the 1920s.', 'An iconic novel that explores themes of ambition, love, and the decay of American society.', 'F. Scott Fitzgerald was an American novelist and short story writer, best known for his novel The Great Gatsby.', 'pending', '2024-12-20 02:27:03', '2024-12-20 02:27:03');
+INSERT INTO `landing_views` (`id`, `title`, `author`, `genres`, `published`, `format`, `language`, `about`, `about_author`, `approval_status`, `created_at`, `updated_at`) VALUES
+(7, 'df', 'fsdf', 'Cultural', '2004-03-10', '12', 'French', 'sdfsf', 'dfsdf', 'rejected', '2024-12-20 07:24:55', '2024-12-20 07:25:27'),
+(16, 'Carrie', 'Stephen King', 'Contemporary, Fantasy, Contemporary, Genre Fiction', '2005-01-01', '272', 'English', 'A modern classic, Carrie introduced a distinctive new voice in American fiction -- Stephen King. The story of misunderstood high school girl Carrie White, her extraordinary telekinetic powers, and her violent rampage of revenge, remains one of the most barrier-breaking and shocking novels of all time.\r\n\r\nMake a date with terror and live the nightmare that is...Carrie --back cover', 'Stephen King, born in Portland, Maine, is a renowned author celebrated for his contributions to horror, mystery, and fiction. Raised by his mother after his father left, King spent much of his childhood in Maine and later graduated with a B.A. in English from the University of Maine in 1970. Struggling financially in his early career, he worked various jobs while writing short stories, with his first professional sale being \"The Glass Floor\" in 1967. King began teaching English in 1971 but continued writing, eventually becoming one of the most successful and prolific authors of modern times, with works that have shaped contemporary literature and popular culture.', 'approved', '2024-12-20 07:53:40', '2024-12-20 07:54:37'),
+(17, 'Carrie', 'Stephen King', 'Animals, Activity Books, Cultural, European', '2005-01-10', '272', 'English', 'A modern classic, Carrie introduced a distinctive new voice in American fiction -- Stephen King. The story of misunderstood high school girl Carrie White, her extraordinary telekinetic powers, and her violent rampage of revenge, remains one of the most barrier-breaking and shocking novels of all time.\r\nMake a date with terror and live the nightmare that is...Carrie--back cover', 'Stephen King, born in Portland, Maine, is a renowned author celebrated for his contributions to horror, mystery, and fiction. Raised by his mother after his father left, King spent much of his childhood in Maine and later graduated with a B.A. in English from the University of Maine in 1970. Struggling financially in his early career, he worked various jobs while writing short stories, with his first professional sale being \"The Glass Floor\" in 1967. King began teaching English in 1971 but continued writing, eventually becoming one of the most successful and prolific authors of modern times, with works that have shaped contemporary literature and popular culture.', 'pending', '2024-12-20 07:57:03', '2024-12-20 07:57:03'),
+(18, 'hdhsghdgs', 'sagfsgf', 'Animals', '2005-05-05', '666', 'English', 'sgfgaffafffsdf', 'gfsfafsf', 'rejected', '2024-12-20 08:13:38', '2024-12-20 08:30:32'),
+(19, 'The Maid', 'Nita Prose', 'Fantasy, Genre Fiction', '2022-01-02', '304 pages', 'English', 'Molly Gray is not like everyone else. She struggles with social skills and misreads the intentions of others. Her gran used to interpret the world for her, codifying it into simple rules that Molly could live by.', 'NITA PROSE is the #1 New York Times bestselling author of The Mystery Guest and The Maid, which has sold more than two million copies worldwide. A Good Morning America Book Club pick, The Maid won the Ned Kelly Award for International Crime Fiction, the Fingerprint Award for Debut Book of the Year, the Anthony Award for Best First Novel, and the Barry Award for Best First Mystery.', 'approved', '2024-12-20 08:22:10', '2024-12-20 08:30:57'),
+(20, '1984', 'George Orwell', 'Historical, Contemporary', '2022-07-01', '368 pages', 'English', 'A masterpiece of rebellion and imprisonment where war is peace freedom is slavery and Big Brother is watching. Thought Police, Big Brother, Orwellian - these words have entered our vocabulary because of George Orwell\'s classic dystopian novel 1984. The story of one man\'s Nightmare Odyssey as he pursues a forbidden love affair through a world ruled by warring states and a power structure that controls not only information but also individual thought and memory 1984 is a prophetic haunting tale More relevant than ever before 1984 exposes the worst crimes imaginable the destruction of truth freedom and individuality.', 'Eric Arthur Blair, better known by his pen name George Orwell, was an English author and journalist. His work is marked by keen intelligence and wit, a profound awareness of social injustice, an intense opposition to totalitarianism, a passion for clarity in language, and a belief in democratic socialism.', 'approved', '2024-12-20 08:26:02', '2024-12-20 08:30:40'),
+(21, 'The Outsiders', 'S.E. Hinton', 'Historical, Contemporary', '2021-01-01', '214 pages', 'English', 'No one ever said life was easy. But Ponyboy is pretty sure that he\'s got things figured out. He knows that he can count on his brothers, Darry and Sodapop. And he knows that he can count on his friends - true friends who would do anything for him, like Johnny and Two-Bit. And when it comes to the beating up on \"greasers\" like him and his friends - he knows that he can count on them for trouble. But one night someone takes things too far, and Ponyboy\'s world is turned upside down...', 'S.E. Hinton, was and still is, one of the most popular and best known writers of young adult fiction. Her books have been taught in some schools, and banned from others. Her novels changed the way people look at young adult literature. Susan Eloise Hinton was born in Tulsa, Oklahoma. She has always enjoyed reading but wasn\'t satisfied with the literature that was being written for young adults, which influenced her to write novels like The Outsiders.', 'pending', '2024-12-20 08:29:47', '2024-12-20 08:29:47'),
+(22, 'Beloved', 'Toni Morrison', 'Historical, Contemporary', '2008-06-08', '325 pages', 'English', 'Sethe, its protagonist, was born a slave and escaped to Ohio, but eighteen years later she is still not free. She has too many memories of Sweet Home, the beautiful farm where so many hideous things happened. And Sethe\'s new home is haunted by the ghost of her baby, who died nameless and whose tombstone is engraved with a single word: Beloved. Filled with bitter poetry and suspense as taut as a rope, Beloved is a towering achievement by Nobel Prize laureate Toni Morrison', 'Her novels are known for their epic themes, vivid dialogue, and richly detailed African American characters; among the best known are her novels The Bluest Eye , Song of Solomon , and Beloved , which won the Pulitzer Prize for Fiction in 1988. In 2001 she was named one of \"The 30 Most Powerful Women in America\" by Ladies\' Home Journal.', 'approved', '2024-12-20 08:34:18', '2024-12-20 08:39:09'),
+(23, 'Peter Pan', 'J.M. Barrie', 'Action & Adventure, Fantasy', '2003-10-01', '155 pages', 'English', 'One starry night, Peter Pan and Tinker Bell lead the three Darling children over the rooftops of London and away to Neverland - the island where lost boys play, mermaids splash and fairies make mischief. But a villainous-looking gang of pirates lurk in the docks, led by the terrifying Captain James Hook.', 'James Matthew Barrie was a Scottish novelist and playwright, best remembered as the creator of Peter Pan. He was born and educated in Scotland and then moved to London, where he wrote several successful novels and plays.', 'approved', '2024-12-20 08:38:37', '2024-12-20 08:39:16');
 
 -- --------------------------------------------------------
 
@@ -199,15 +215,15 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(94, '0001_01_01_000000_create_users_table', 1),
-(95, '0001_01_01_000001_create_cache_table', 1),
-(96, '0001_01_01_000002_create_jobs_table', 1),
-(97, '2024_12_16_132514_create_landings_table', 1),
-(98, '2024_12_16_183154_create_user_logins_table', 1),
-(99, '2024_12_17_112459_create_book_view_models_table', 1),
-(100, '2024_12_17_135718_create_reviews_table', 1),
-(101, '2024_12_17_155046_create_landing_views_table', 1),
-(102, '2024_12_18_141831_create_comments_table', 1);
+(103, '0001_01_01_000000_create_users_table', 1),
+(104, '0001_01_01_000001_create_cache_table', 1),
+(105, '0001_01_01_000002_create_jobs_table', 1),
+(106, '2024_12_16_132514_create_landings_table', 1),
+(107, '2024_12_16_183154_create_user_logins_table', 1),
+(108, '2024_12_17_112459_create_book_view_models_table', 1),
+(109, '2024_12_17_135718_create_reviews_table', 1),
+(110, '2024_12_17_155046_create_landing_views_table', 1),
+(111, '2024_12_18_141831_create_comments_table', 1);
 
 -- --------------------------------------------------------
 
@@ -256,7 +272,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('uZP1tsKNGkTp4yTYH8PZwylKwXzw3JwJRUuigrax', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiNjNGSUtQYVQ2RGxaZXFwWkRBVUlCem9kVzZucmJoUm5FYmVhckFxVyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzY6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9BZG1pbkRhc2hib2FyZCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1734690467);
+('1zTrKagXNzvQ2UA7eJrYhmviDbgzMk2hxMgGEV8n', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiRENBUlpNdkdpN0JiUjZIY2hoY0JWWURLaTNLMk1JNUpGMUtBWDNhbiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9ib29rLzE2Ijt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6NDt9', 1734715990);
 
 -- --------------------------------------------------------
 
@@ -295,7 +311,10 @@ CREATE TABLE `user_logins` (
 --
 
 INSERT INTO `user_logins` (`id`, `username`, `birthday`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '2000-01-01', '$2y$12$8K3vyhg7D9Qe9xF41kOdiOBtz5zsPnQu.3EBnpIiFCi252Bev8TRa', '2024-12-20 02:27:19', '2024-12-20 02:27:19');
+(1, 'admin', '2000-01-01', '$2y$12$4m94aX5FiPxCN6ZDKQ7z/.UFlLq8Wv22Hp1J/q6LbmFbHqEXIbJBe', '2024-12-20 07:00:13', '2024-12-20 07:00:13'),
+(2, 'karylle', '2003-03-10', '$2y$12$i8HKu8S32fNDkW2l0vwfJeTUv3ZptdRb2t.2xAcYZpigwelGV7Mq6', '2024-12-20 07:03:53', '2024-12-20 07:03:53'),
+(3, 'kristelle', '2003-11-23', '$2y$12$Lt2vVV1R0fkw1iqbiL51.OJFPJMHHHY0.7kmXsouYZpZZGBXFhJg2', '2024-12-20 07:58:56', '2024-12-20 07:58:56'),
+(4, 'wendee', '2002-12-12', '$2y$12$sDcyBUKdXaaeiRo8/3eoJe5Bs0BTVXa3PRlhiZMTzTCTmckQu3b1W', '2024-12-20 09:31:54', '2024-12-20 09:31:54');
 
 --
 -- Indexes for dumped tables
@@ -414,7 +433,7 @@ ALTER TABLE `book_view_models`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -438,13 +457,13 @@ ALTER TABLE `landings`
 -- AUTO_INCREMENT for table `landing_views`
 --
 ALTER TABLE `landing_views`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -456,7 +475,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_logins`
 --
 ALTER TABLE `user_logins`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
