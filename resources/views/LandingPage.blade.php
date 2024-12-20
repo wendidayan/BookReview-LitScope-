@@ -689,7 +689,7 @@
                                                 <picture class="d-xl-flex d-xxl-flex justify-content-xl-center justify-content-xxl-center" style="width: 80px">
                                                     <img
                                                         class="img-fluid border rounded"
-                                                        src="/assets/img/Asset%201.png?h=5b3d64bc53126679d6091568004b9ab7"/>
+                                                         src="{{ $book->image_url }}"
                                                 </picture>
                                                 <div
                                                     class="text-start d-flex flex-column justify-content-xxl-center" style=" margin-left: 15px; margin-right: 15px; " >
@@ -755,7 +755,8 @@
                                 <!-- Rating -->
                                 <div class="d-flex mb-2">
                                     @for ($i = 0; $i < 5; $i++)
-                                        <i class="fas fa-star" style="color: {{ $i < $book->rating ? 'var(--bs-yellow)' : 'rgb(174, 174, 174)' }};"></i>
+                                        <!--<i class="fas fa-star" style="color: {{ $i < $book->rating ? 'var(--bs-yellow)' : 'rgb(174, 174, 174)' }};"></i>-->
+                                        <i class="fas fa-star" style="color: var(--bs-yellow);"></i>
                                     @endfor
                                 </div>
 
@@ -814,9 +815,10 @@
 
                                             <!-- Rating -->
                                             <div class="d-flex mb-2">
-                                                @for ($i = 0; $i < 5; $i++)
-                                                    <i class="fas fa-star" style="color: {{ $i < $book->rating ? 'var(--bs-yellow)' : 'rgb(174, 174, 174)' }};"></i>
-                                                @endfor
+                                            @for ($i = 0; $i < 5; $i++)
+                                                <i class="fas fa-star" style="color: {{ $i < 3 ? 'var(--bs-yellow)' : 'rgb(174, 174, 174)' }};"></i>
+                                            @endfor
+
                                             </div>
 
                                             <!-- Author -->

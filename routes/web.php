@@ -120,9 +120,9 @@ Route::get('/AdminBooks',[UserController::class, 'showBooks'])->name('books.inde
 //});
 
 
-Route::get('/WelcomePage', function () {
-    return view('WelcomePage');
-});
+//Route::get('/WelcomePage', function () {
+   // return view('WelcomePage');
+//});
 
 
 //Route::get('/AdminRemoveBook', function () {

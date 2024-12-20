@@ -12,7 +12,7 @@ class LandingViewController extends Controller
     // Show the landing page with popular books
     public function index()
     {
-        $popularBooks = LandingView::where('approval_status', 'approved')->get();
+        $popularBooks = LandingView::where('approval_status', 'approved')->paginate(5);
         //$popularBooks = LandingView::take(5)->get(); 
         $userCount = UserLogin::count();
         $bookCount = LandingView::count();
@@ -31,12 +31,15 @@ class LandingViewController extends Controller
     public function show($id)
     {
         // Retrieve the first five books from the database
-        $popularBooks = LandingView::take(5)->get();
+        $popularBooks = LandingView::where('approval_status', 'approved')->paginate(5);
 
         foreach ($popularBooks as $index => $book) {
             // Dynamically build the asset image path based on the book index (1, 2, 3, etc.)
             $book->image_url = asset('assets/img/Asset ' . ($index + 1) . '.png');
+            
         }
+
+        $book->author_url = asset('assets/img/Author ' . ($id) . '.jpg');
 
         $book = LandingView::with(['comments' => function($query) {
             // Retrieve only top-level comments (where parent_id is NULL)
@@ -150,7 +153,7 @@ class LandingViewController extends Controller
 
     public function showAll()
     {
-        $popularBooks = LandingView::paginate(10);;
+        $popularBooks = LandingView::where('approval_status', 'approved')->paginate(10);
         $userCount = UserLogin::count();
         $bookCount = LandingView::count();
         $currentUser = auth()->user();

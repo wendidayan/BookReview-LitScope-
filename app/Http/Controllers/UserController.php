@@ -64,6 +64,7 @@ class UserController extends Controller
             $totalComments = Comment::whereNull('parent_id')->count();
             $totalAuthors = LandingView::distinct('author')->count('author');
             $currentUser = auth()->user();
+            $popularBooks = LandingView::where('approval_status', 'approved')->paginate(5);
 
             foreach ($popularBooks as $index => $book) {
                 $book->image_url = asset('assets/img/Asset ' . ($index + 1) . '.png');
@@ -124,7 +125,7 @@ class UserController extends Controller
     public function showBooks()
     {
         // Fetch all users from the database
-        $allBooks = LandingView::all();
+        $allBooks = LandingView::where('approval_status', 'approved')->get(5);
         $currentUser = auth()->user();
 
         // Pass the users to the Blade template

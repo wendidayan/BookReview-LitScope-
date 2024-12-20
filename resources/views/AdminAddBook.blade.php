@@ -503,19 +503,40 @@
                                         <div
                                             class="col d-xl-flex d-xxl-flex justify-content-xl-end justify-content-xxl-end"
                                         >
-                                            <button
-                                                class="btn btn-primary d-xxl-flex justify-content-xxl-center align-items-xxl-center"
-                                                form="addBookForm"
-                                                type="submit"
-                                                style="
-                                                    border-radius: 11px;
-                                                    border-style: none;
-                                                    font-size: 20px;
-                                                    color: rgb(255, 255, 255);
-                                                "
-                                            >
-                                                Confirm&nbsp;
-                                            </button>
+                                        <button
+                                            class="btn btn-primary d-xxl-flex justify-content-xxl-center align-items-xxl-center"
+                                            type="button"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#confirmationModal"
+                                            style="border-radius: 11px; border-style: none; font-size: 20px; color: rgb(255, 255, 255);"
+                                        >
+                                            Confirm&nbsp;
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="confirmationModalLabel">Book Submission Confirmation</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       Book is submitted for approval. Thank you!
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary" onclick="submitForm()">OK</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            function submitForm() {
+                                                // Submit the form after the user confirms
+                                                document.getElementById("addBookForm").submit();
+                                            }
+                                        </script>
                                         </div>
                                     </div>
                                     <hr />

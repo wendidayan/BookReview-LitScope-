@@ -842,7 +842,7 @@
                             <div class="card" style="border-radius: 20px; margin-top: 21px; margin-bottom: 21px;">
                                 <div class="card-body" style="padding: 33px;">
                                     <div class="d-flex align-items-xl-center">
-                                        <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="70" height="68" src="/assets/img/clipboard-image-1.png?h=67a47b433459939fe8e1a85f5d8700cd"  src="{{ $book->image_url }}"  />
+                                        <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="70" height="68" src="/assets/img/clipboard-image-1.png?h=67a47b433459939fe8e1a85f5d8700cd"   src="{{ $book->author_url }}"  />
                                         <div>
                                             <p class="fw-bold mb-0">{{ $book->author }}</p>
                                             <p class="text-muted mb-0">
