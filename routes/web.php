@@ -12,18 +12,24 @@ use App\Models\Landing;
 use App\Models\UserLogin;
 
 
-Route::get('/login-page', [UserController::class, 'index'])->name('login-page');
+//Route::get('/login-page', [UserController::class, 'index'])->name('login-page');
 //Route::post('/login-page', [UserController::class, 'login'])->name('login.submit');
 //Route::post('/signup', [UserController::class, 'register'])->name('signup.submit');
+
+
 
 // Display the login form (GET request)
 Route::get('/', [UserController::class, 'showLoginForm'])->name('login');
 
 // Handle the login form submission (POST request)
-Route::post('/login', [UserController::class, 'logrequest'])->name('login.submit'); 
+Route::post('/login-page', [UserController::class, 'logrequest'])->name('login.submit'); 
 
 // Handle signup
 Route::post('/signup', [UserController::class, 'register'])->name('signup.submit');
+
+
+
+
 
 // Landing page (after successful login)
 Route::get('/landing', [LandingViewController::class, 'index'])->name('landing');

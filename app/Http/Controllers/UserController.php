@@ -97,7 +97,8 @@ class UserController extends Controller
          Log::info('Register controller triggered for user: ' . $request->username);
 
 
-        return redirect()->route('login-page')->with('success', 'Account created successfully! Please login.');
+         return redirect()->route('login')->with('success', 'Account created successfully! Please login.');
+
     }
 
     public function logout(Request $request)
